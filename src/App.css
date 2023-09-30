@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Playfair+Display:wght@600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 3rem;
+  margin: 0px;
+  background: #020617;
+  color: #fff;
+  --type-first: 'Nunito', Arial, sans-serif;
+  --type-second: 'Playfair Display', serif;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0px;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 60rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+.animeLeft {
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: animeLeft 0.6s forwards;
+}
+
+@keyframes animeLeft {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh + 10rem);
+}
+
+:root {
+  --gradient: linear-gradient(to right, #a839ff, #800add);
+}

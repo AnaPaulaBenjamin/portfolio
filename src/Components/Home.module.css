@@ -1,0 +1,60 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+}
+
+.home p:first-child {
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: var(--type-first);
+  margin-bottom: 0.5rem;
+}
+
+.home h1 {
+  font-family: var(--type-second);
+  font-size: 4.5rem;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.home p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-family: var(--type-first);
+  color: #7c7c8a;
+}
+
+@media (max-width: 45rem) {
+  .home {
+    padding-top: 6rem;
+  }
+  .home h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  .home p:first-child {
+    font-size: 1rem;
+  }
+  .home p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 25rem) {
+  .home {
+    padding-top: 5rem;
+  }
+  .home h1 {
+    font-size: 3rem;
+  }
+  .home p:first-child {
+    font-size: 0.6rem;
+  }
+  .home p {
+    font-size: 0.8rem;
+  }
+}
