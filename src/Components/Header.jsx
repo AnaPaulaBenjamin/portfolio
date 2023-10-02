@@ -7,26 +7,26 @@ import Sun from '../assets/Sun.jsx';
 
 const Header = () => {
   return (
-    <header className={styles.header}>
-      <div className={`${styles.mainContainer} container`}>
+    <header className={styles.mainContainer}>
+      <div className={`${styles.header} container`}>
         <Link className={styles.logo} to="/" aria-label="Logo - Home">
           <Logo />
         </Link>
         <nav>
           <ul className={styles.nav}>
             <li>
-              <Link className={styles.menu} to="/sobre" aria-label="sobre">
+              <Link className={styles.list} to="/sobre" aria-label="sobre">
                 Sobre
               </Link>
             </li>
             <li>
-              <Link className={styles.menu} to="/" aria-label="compêtencias">
+              <Link className={styles.list} to="/" aria-label="compêtencias">
                 Compêtencias
               </Link>
             </li>
             <li>
               <Link
-                className={styles.menu}
+                className={styles.list}
                 to="/projetos"
                 aria-label="projetos"
               >
@@ -34,7 +34,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link className={styles.menu} to="/" aria-label="contato">
+              <Link className={styles.list} to="/" aria-label="contato">
                 Contato
               </Link>
             </li>

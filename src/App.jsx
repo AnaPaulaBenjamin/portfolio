@@ -3,7 +3,8 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './Components/Header';
 import Home from './Components/Home';
-import Sobre from './Components/Sobre/Sobre';
+import About from './Components/About/About';
+import Skills from './Components/Skills/Skills';
 // import Footer from './Components/Footer';
 
 const App = () => {
@@ -12,9 +13,10 @@ const App = () => {
       <BrowserRouter>
         <Header />
         <Home />
-        <Sobre />
+        <About />
+        <Skills />
         <Routes>
-          <Route path="/sobre" element={<Sobre />} />
+          <Route path="/sobre" element={<About />} />
         </Routes>
         {/* <Footer /> */}
       </BrowserRouter>

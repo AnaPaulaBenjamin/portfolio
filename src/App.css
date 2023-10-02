@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Playfair+Display:wght@600&display=swap');
 
+:root {
+  --bg: #020617;
+  --gray: #7c7c8a;
+  --white: #f5f5f5;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -7,8 +13,8 @@
 body {
   padding-top: 3rem;
   margin: 0px;
-  background: #020617;
-  color: #fff;
+  background: var(--bg);
+  color: var(--white);
   --type-first: 'Nunito', Arial, sans-serif;
   --type-second: 'Playfair Display', serif;
 }
@@ -30,6 +36,10 @@ li {
 img {
   display: block;
   max-width: 100%;
+}
+
+button {
+  padding: 0px;
 }
 
 a {
@@ -55,12 +65,16 @@ a {
   }
 }
 
+.title {
+  padding-left: 3rem;
+  font-family: var(--type-first);
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
 .App {
   display: flex;
   flex-direction: column;
   min-height: calc(100vh + 10rem);
-}
-
-:root {
-  --gradient: linear-gradient(to right, #a839ff, #800add);
 }

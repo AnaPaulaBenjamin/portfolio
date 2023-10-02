@@ -1,4 +1,4 @@
-.header {
+.mainContainer {
   position: fixed;
   width: 100%;
   z-index: 100;
@@ -7,7 +7,7 @@
   box-shadow: 0px 1px 4px rgba(168, 57, 255, 0.4);
 }
 
-.mainContainer {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,16 +28,16 @@
   align-items: center;
 }
 
-.menu {
+.list {
   padding: 0.3rem;
   font-size: 1rem;
-  color: #fff;
+  color: var(--white);
 }
 
 .mode {
   display: flex;
   gap: 0.2rem;
-  background: #020617;
+  background: var(--bg);
   border: 1px solid rgb(124, 124, 138, 0.6);
   border-radius: 20px;
   padding: 4px 6px;

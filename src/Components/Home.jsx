@@ -1,21 +1,20 @@
 import React from 'react';
 import styles from './Home.module.css';
-import Gradient from '../Gradient';
 
 const Home = () => {
   return (
     <section>
       <div className={`${styles.home} container`}>
-        <p>
+        <div className={styles.hello}>
           <span className={styles.icone}>👋🏻</span>
-          <Gradient> Olá, meu nome é</Gradient>
-        </p>
+          <p>Olá, meu nome é</p>
+        </div>
         <h1>
           Ana Paula
           <br />
-          Benjamin<Gradient>.</Gradient>
+          Benjamin
         </h1>
-        <p>Desenvolvedora Front-end & UI Design</p>
+        <p className={styles.work}>Desenvolvedora Front-end & UI Design</p>
       </div>
     </section>
   );

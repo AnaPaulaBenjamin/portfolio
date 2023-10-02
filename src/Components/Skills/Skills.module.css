@@ -1,0 +1,38 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10rem;
+}
+
+.skills h2 {
+  padding: 4rem 0 3rem 3rem;
+  font-family: var(--type-first);
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  color: var(--white);
+  font-size: 2rem;
+}
+
+.mySkills h3 {
+  font-family: var(--type-first);
+  color: var(--gray);
+  font-weight: 400;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.list {
+  display: flex;
+  font-family: var(--type-first);
+  padding-bottom: 4rem;
+  gap: 1rem;
+}
+
+.list li {
+  border: 1px solid var(--gray);
+  padding: 1rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-size: 0.5rem;
+}
