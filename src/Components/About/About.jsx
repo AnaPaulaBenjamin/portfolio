@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './About.module.css';
 import ArrowText from '../StyledComponents/ArrowText';
-import SubTitle from '../StyledComponents/SubTitle';
+import TitleH2 from '../StyledComponents/SubTitle';
 
 const About = () => {
   return (
     <section>
       <div className={`${styles.about} container`}>
-        <SubTitle text="sobre" />
+        <TitleH2 text="sobre" />
         <div className={styles.image}>
           <img src="../src/assets/foto.jpg" alt="Foto - Ana Paula Benjamin" />
         </div>

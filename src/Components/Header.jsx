@@ -2,8 +2,8 @@ import React from 'react';
 import styles from './Header.module.css';
 import { Link } from 'react-router-dom';
 import Logo from '../assets/logo.jsx';
-import Moon from '../assets/moon.jsx';
-import Sun from '../assets/Sun.jsx';
+import Moon from '../assets/Mode/moon.jsx';
+import Sun from '../assets/Mode/Sun.jsx';
 
 const Header = () => {
   return (
@@ -21,7 +21,7 @@ const Header = () => {
             </li>
             <li>
               <Link className={styles.list} to="/" aria-label="compêtencias">
-                Compêtencias
+                Habilidades
               </Link>
             </li>
             <li>
