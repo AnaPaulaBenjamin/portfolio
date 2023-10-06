@@ -1,13 +1,13 @@
-.mainContainer {
+.header {
   position: fixed;
   width: 100%;
   z-index: 100;
-  background: rgba(2, 6, 23, 0.8);
+  background: rgba(2, 6, 23, 0.9);
   top: 0px;
-  box-shadow: 0px 1px 5px rgba(168, 57, 255, 0.4);
+  /* box-shadow: 0 0 10px rgba(49, 42, 94, 0.2); */
 }
 
-.header {
+.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,32 +22,32 @@
 
 .nav {
   display: flex;
-  gap: 0.6rem;
+  gap: 1.5rem;
   font-weight: 200;
   font-family: var(--type-first);
   align-items: center;
 }
 
 .list {
-  padding: 0.3rem;
+  margin: 0.3rem;
   font-size: 1rem;
-  color: var(--white);
+  color: var(--text-1);
+}
+
+.list:hover {
+  color: var(--text-3);
 }
 
 .mode {
   display: flex;
   gap: 0.2rem;
-  background: var(--bg);
-  border: 1px solid rgb(124, 124, 138, 0.6);
-  border-radius: 20px;
-  padding: 4px 6px;
+  background: var(--bg-2);
+  border-radius: 15px;
+  padding: 5px 8px;
 }
 
 @media (max-width: 45rem) {
   .nav {
     display: none;
-  }
-  .logo svg {
-    width: 140px;
   }
 }

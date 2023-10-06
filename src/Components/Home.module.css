@@ -1,19 +1,24 @@
 .home {
   display: flex;
   flex-direction: column;
-  padding-top: 10rem;
-  padding-bottom: 6rem;
+  height: 100vh;
+  vertical-align: bottom;
+  justify-content: center;
   position: relative;
 }
 
-.hello {
+.bg {
+  background: var(--bg-gradient);
+}
+
+.iconHello {
   display: flex;
   position: relative;
   gap: 0.3rem;
   align-items: center;
 }
 
-.hello p {
+.iconHello p {
   background-image: linear-gradient(to right, #a839ff, #800add);
   background-clip: text;
   -webkit-background-clip: text;
@@ -23,7 +28,7 @@
   font-family: var(--type-first);
 }
 
-.icone {
+.icon {
   align-items: center;
   font-size: 1.3rem;
   margin-bottom: 0.3rem;

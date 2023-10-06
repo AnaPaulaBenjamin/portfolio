@@ -2,9 +2,18 @@
 
 :root {
   --bg: #020617;
-  --bg2: #13131f;
-  --gray: #7c7c8a;
-  --white: #f5f5f5;
+  --bg-2: #13131f;
+  --text-1: #f5f5f5;
+  --text-2: #d6d6d6;
+  --text-3: #7c7c8a;
+  --brand: #800ddd;
+  --bg-gradient: linear-gradient(165deg, #0e0919 30%, #312a5e 100%, #653a86);
+
+  /* --bg-2: #13131f;
+  --text-1: #f5f5f5;
+  --text-2: #d6d6d6;
+  --text-3: #7c7c8a;
+  --brand: #800ddd; */
 }
 
 * {
@@ -12,10 +21,9 @@
 }
 
 body {
-  padding-top: 3rem;
   margin: 0px;
   background: var(--bg);
-  color: var(--white);
+  color: var(--text-1);
   --type-first: 'Nunito', Arial, sans-serif;
   --type-second: 'Playfair Display', serif;
 }
@@ -48,26 +56,15 @@ a {
   text-decoration: none;
 }
 
-h3 {
-  padding-bottom: 1.5rem;
-  text-transform: uppercase;
-  font-family: var(--type-first);
-  color: var(--gray);
-  font-size: 1rem;
-  letter-spacing: 0.05rem;
-  font-weight: 400;
-}
-
-@media (max-width: 30rem) {
-  h3 {
-    font-size: 0.8rem;
-  }
-}
-
 .container {
   max-width: 60rem;
   padding: 0 2rem;
   margin: 0 auto;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
 }
 
 .animeLeft {
@@ -83,8 +80,18 @@ h3 {
   }
 }
 
-.App {
-  display: flex;
-  flex-direction: column;
-  min-height: calc(100vh + 10rem);
+h3 {
+  padding-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-family: var(--type-first);
+  color: var(--text-3);
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  font-weight: 400;
+}
+
+@media (max-width: 30rem) {
+  h3 {
+    font-size: 0.8rem;
+  }
 }

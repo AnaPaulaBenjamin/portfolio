@@ -24,12 +24,12 @@ const StyledLink = styled(Link)`
 
   &:hover {
     background-image: none;
-    background-color: var(--gray);
+    background-color: var(--text-3);
   }
 
   &:hover {
     path {
-      stroke: var(--gray);
+      stroke: var(--text-3);
     }
   }
 
@@ -62,7 +62,7 @@ const ArrowText = ({ text }) => {
         >
           <path
             d="M1 5H15M15 5L11 1M15 5L11 9"
-            stroke="#800ADD"
+            stroke="var(--brand)"
             strokeLinecap="round"
             strokeLinejoin="round"
           />

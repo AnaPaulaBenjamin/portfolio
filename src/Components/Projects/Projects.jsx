@@ -2,13 +2,13 @@ import React from 'react';
 import Styles from '../Projects/Projects.module.css';
 import SubTitle from '../StyledComponents/SubTitle';
 import { Link } from 'react-router-dom';
-import IconMore from '../../assets/IconMore';
+import IconMore from './IconModal';
 import IconHtml from '../../assets/Skills/Html';
 import IconCss from '../../assets/Skills/Css';
 import IconReact from '../../assets/Skills/React';
 import IconJavaScrip from '../../assets/Skills/JavaScript';
 import ArrowText from '../StyledComponents/ArrowText';
-// import StyledProjects from '../StyledComponents/Project';
+import IconeModal from './IconModal';
 
 const Projects = () => {
   return (
@@ -22,9 +22,7 @@ const Projects = () => {
             <div className={Styles.prod}>
               <div className={Styles.title}>
                 <h4>Projetos</h4>
-                <Link to="/" aria-label="Tela maior">
-                  <IconMore />
-                </Link>
+                <IconMore />
               </div>
               <p>
                 Estou ansiosa para aplicar essas habilidades e conhecimentos no
@@ -44,7 +42,7 @@ const Projects = () => {
               <div className={Styles.title}>
                 <h4>Projetos</h4>
                 <Link to="/" aria-label="Tela maior">
-                  <IconMore />
+                  <IconeModal />
                 </Link>
               </div>
               <p>

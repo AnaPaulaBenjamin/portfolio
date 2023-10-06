@@ -7,8 +7,8 @@ import Sun from '../assets/Mode/Sun.jsx';
 
 const Header = () => {
   return (
-    <header className={styles.mainContainer}>
-      <div className={`${styles.header} container`}>
+    <header className={styles.header}>
+      <div className={`${styles.container} container`}>
         <Link className={styles.logo} to="/" aria-label="Logo - Home">
           <Logo />
         </Link>
@@ -38,10 +38,10 @@ const Header = () => {
                 Contato
               </Link>
             </li>
-            <div className={styles.mode}>
+            <li className={styles.mode}>
               <Moon />
               <Sun />
-            </div>
+            </li>
           </ul>
         </nav>
       </div>

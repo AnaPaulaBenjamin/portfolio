@@ -2,19 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Title = styled.h2`
-  padding-top: 4rem;
-  padding-left: 3rem;
-  padding-bottom: 3rem;
+  padding: 3rem 0 3rem 4rem;
   font-family: var(--type-first);
-  color: var(--white);
+  color: var(--text-2);
   letter-spacing: 0.1rem;
   font-weight: 600;
   font-size: 2rem;
 
   @media (max-width: 50rem) {
-    padding-top: 2rem;
-    padding-left: 2rem;
-    padding-bottom: 1.5rem;
+    padding: 2rem 0 2rem 2rem;
     font-size: 1.5rem;
   }
 
