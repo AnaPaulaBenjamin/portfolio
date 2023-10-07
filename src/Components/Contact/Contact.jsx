@@ -1,26 +1,26 @@
 import React from 'react';
 import Styles from '../Contact/Contact.module.css';
-import SubTitle from '../StyledComponents/SubTitle';
-import Email from '../../assets/Networks/Email';
-import Github from '../../assets/Networks/Github';
-import Linkedin from '../../assets/Networks/Linkedin';
-import Number from '../../assets/Networks/Number';
+import Title from '../StyledComponents/Title';
+import Email from '../../assets/Contact/Email';
+import Github from '../../assets/Contact/Github';
+import Linkedin from '../../assets/Contact/Linkedin';
+import Number from '../../assets/Contact/Number';
 
 const Contact = () => {
   return (
-    <section>
+    <section> 
       <div className={`${Styles.contact} container`}>
-        <SubTitle text="contato" />
-        <h3>como me encontrar</h3>
+        <Title text="contato" />
+        <h3 className='subTitle'>como me encontrar</h3>
         <div className={Styles.networks}>
           <div className={Styles.list}>
             <a href="mailto:anabenjamin.dev@gmail.com">
-              <div className={Styles.svg}>
+              <div className={Styles.icon}>
                 <Email />
               </div>
             </a>
             <a href="mailto:anabenjamin.dev@gmail.com">
-              <p>Email</p>
+              <p>E-mail</p>
             </a>
             <a href="mailto:anabenjamin.dev@gmail.com">
               <span>anabenjamin.dev@gmail.com</span>
@@ -32,7 +32,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className={Styles.svg}>
+              <div className={Styles.icon}>
                 <Github />
               </div>
             </a>
@@ -57,7 +57,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className={Styles.svg}>
+              <div className={Styles.icon}>
                 <Linkedin />
               </div>
             </a>
@@ -78,7 +78,7 @@ const Contact = () => {
           </div>
           <div className={Styles.list}>
             <a href="tel:+55479997233267">
-              <div className={Styles.svg}>
+              <div className={Styles.icon}>
                 <Number />
               </div>
             </a>

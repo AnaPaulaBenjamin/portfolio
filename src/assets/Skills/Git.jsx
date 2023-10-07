@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Git = () => {
+const Git = ({ width, height, fill }) => {
   return (
     <svg
-      width="25"
-      height="25"
+      width={width || '25'}
+      height={height || '25'}
       viewBox="0 0 25 25"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -22,8 +22,8 @@ const Git = () => {
           y2="12.5"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#A839FF" />
-          <stop offset="1" stopColor="#800ADD" />
+          <stop stopColor={fill || 'var(--purple-1)'} />
+          <stop offset="1" stopColor={fill || 'var(--purple-2)'} />
         </linearGradient>
       </defs>
     </svg>

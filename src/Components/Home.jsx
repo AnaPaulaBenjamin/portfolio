@@ -1,24 +1,24 @@
 import React from 'react';
 import styles from './Home.module.css';
-import Background from '../assets/Background';
+import BgHome from './StyledComponents/BgHome';
 
 const Home = () => {
   return (
     <section>
-      <div className={styles.bg}>
+      <div className="background">
         <div className={`${styles.home} container`}>
           <div className={styles.iconHello}>
-            <span className={styles.icon}>👋🏻</span>
+            <span>👋🏻</span>
             <p>Olá, meu nome é</p>
           </div>
           <h1>
             Ana Paula
             <br />
-            Benjamin
+            Benjamin<span className="gradient">.</span>
           </h1>
-          <p className={styles.work}>Desenvolvedora Front-end & UI Design</p>
+          <h2 className="subTitle">Desenvolvedora Front-end & UI Design</h2>
         </div>
-        <Background />
+        <BgHome />
       </div>
     </section>
   );

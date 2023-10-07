@@ -7,7 +7,7 @@ const Svg = styled.svg`
   z-index: 0;
 `;
 
-const Background = () => {
+const BgHome = () => {
   return (
     <Svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +15,7 @@ const Background = () => {
       viewBox="0 0 1430 320"
     >
       <path
-        fill="var(--bg)"
+        fill="var(--background-1)"
         fill-opacity="1"
         d="M0,256L120,266.7C240,277,480,299,720,298.7C960,299,1200,277,1320,266.7L1440,256L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
       ></path>
@@ -23,4 +23,4 @@ const Background = () => {
   );
 };
 
-export default Background;
+export default BgHome;

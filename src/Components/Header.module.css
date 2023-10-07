@@ -2,16 +2,14 @@
   position: fixed;
   width: 100%;
   z-index: 100;
-  background: rgba(2, 6, 23, 0.9);
-  top: 0px;
-  /* box-shadow: 0 0 10px rgba(49, 42, 94, 0.2); */
+  background: rgba(2, 6, 23, 0.8);
 }
 
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 4rem;
+  height: 3.75rem;
   flex-wrap: wrap;
 }
 
@@ -22,28 +20,28 @@
 
 .nav {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   font-weight: 200;
   font-family: var(--type-first);
   align-items: center;
 }
 
 .list {
-  margin: 0.3rem;
+  padding: 0.25rem;
   font-size: 1rem;
   color: var(--text-1);
 }
 
 .list:hover {
-  color: var(--text-3);
+  color: var(--gray-1);
 }
 
 .mode {
   display: flex;
-  gap: 0.2rem;
-  background: var(--bg-2);
+  gap: 0.5rem;
+  background: var(--gray-4);
   border-radius: 15px;
-  padding: 5px 8px;
+  padding: 0.25rem;
 }
 
 @media (max-width: 45rem) {

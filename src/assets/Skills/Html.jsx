@@ -1,10 +1,10 @@
 import React from 'react';
 
-const HTML = () => {
+const HTML = ({ width, height, fill }) => {
   return (
     <svg
-      width="25"
-      height="28"
+      width={width || '25'}
+      height={height || '28'}
       viewBox="0 0 25 28"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -28,8 +28,8 @@ const HTML = () => {
           y2="14"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#A839FF" />
-          <stop offset="1" stopColor="#800ADD" />
+          <stop stopColor={fill || 'var(--purple-1)'} />
+          <stop offset="1" stopColor={fill || 'var(--purple-2)'} />
         </linearGradient>
         <linearGradient
           id="paint1_linear_221_235"
@@ -39,12 +39,9 @@ const HTML = () => {
           y2="13.9076"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#A839FF" />
-          <stop offset="1" stopColor="#800ADD" />
+          <stop stopColor={fill || 'var(--purple-1)'} />
+          <stop offset="1" stopColor={fill || 'var(--purple-2)'} />
         </linearGradient>
-        <clipPath id="clip0_221_235">
-          <rect width="25" height="28" fill="white" />
-        </clipPath>
       </defs>
     </svg>
   );

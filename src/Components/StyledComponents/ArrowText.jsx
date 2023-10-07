@@ -14,7 +14,7 @@ const Container = styled.div`
 `;
 
 const StyledLink = styled(Link)`
-  background-image: linear-gradient(to right, #a839ff, #800add);
+  background-image: var(--gradient);
   -webkit-background-clip: text;
   color: transparent;
   font-family: var(--type-first);
@@ -24,21 +24,17 @@ const StyledLink = styled(Link)`
 
   &:hover {
     background-image: none;
-    background-color: var(--text-3);
+    background-color: var(--gray-1);
   }
 
   &:hover {
     path {
-      stroke: var(--text-3);
+      stroke: var(--gray-1);
     }
   }
 
-  @media (max-width: 50rem) {
-    font-size: 0.8rem;
-  }
-
-  @media (max-width: 25rem) {
-    font-size: 0.5rem;
+  @media (max-width: 30rem) {
+    font-size: 0.875rem;
   }
 `;
 
@@ -46,6 +42,10 @@ const Arrow = styled.svg`
   width: 16px;
   height: 10px;
   animation: ${AnimeArrow} 2s linear infinite;
+
+  @media (max-width: 30rem) {
+    width: 14px;
+  }
 `;
 
 const ArrowText = ({ text }) => {
@@ -62,7 +62,7 @@ const ArrowText = ({ text }) => {
         >
           <path
             d="M1 5H15M15 5L11 1M15 5L11 9"
-            stroke="var(--brand)"
+            stroke="var(--purple-3)"
             strokeLinecap="round"
             strokeLinejoin="round"
           />

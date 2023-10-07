@@ -15,26 +15,30 @@ const Header = () => {
         <nav>
           <ul className={styles.nav}>
             <li>
-              <Link className={styles.list} to="/sobre" aria-label="sobre">
+              <Link className={styles.list} to="#sobre" aria-label="sobre">
                 Sobre
               </Link>
             </li>
             <li>
-              <Link className={styles.list} to="/" aria-label="compêtencias">
+              <Link
+                className={styles.list}
+                to="#habilidades"
+                aria-label="habilidades"
+              >
                 Habilidades
               </Link>
             </li>
             <li>
               <Link
                 className={styles.list}
-                to="/projetos"
+                to="#projetos"
                 aria-label="projetos"
               >
                 Projetos
               </Link>
             </li>
             <li>
-              <Link className={styles.list} to="/" aria-label="contato">
+              <Link className={styles.list} to="#contato" aria-label="contato">
                 Contato
               </Link>
             </li>

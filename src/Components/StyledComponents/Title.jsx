@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Title = styled.h2`
+const SubTitle = styled.h2`
   padding: 3rem 0 3rem 4rem;
   font-family: var(--type-first);
   color: var(--text-2);
@@ -13,25 +13,22 @@ const Title = styled.h2`
     padding: 2rem 0 2rem 2rem;
     font-size: 1.5rem;
   }
-
-  @media (max-width: 30rem) {
-    display: none;
-  }
 `;
 
 const Gradient = styled.span`
-  background-image: linear-gradient(to right, #a839ff, #800add);
+  background-image: var(--gradient);
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 `;
 
-const SubTitle = ({ text }) => {
+const Title = ({ text }) => {
   return (
-    <Title>
+    <SubTitle>
       {text}
       <Gradient>.</Gradient>
-    </Title>
+    </SubTitle>
   );
 };
 
-export default SubTitle;
+export default Title;

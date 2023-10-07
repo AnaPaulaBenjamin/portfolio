@@ -30,8 +30,8 @@ const Logo = () => {
           y2="14"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#A839FF" />
-          <stop offset="1" stopColor="#800ADD" />
+          <stop stopColor="var(--purple-1)" />
+          <stop offset="1" stopColor="var(--purple-2)" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_84_496"
@@ -41,8 +41,8 @@ const Logo = () => {
           y2="14"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#A839FF" />
-          <stop offset="1" stopColor="#800ADD" />
+          <stop stopColor="var(--purple-1)" />
+          <stop offset="1" stopColor="var(--purple-2)" />
         </linearGradient>
       </defs>
     </svg>

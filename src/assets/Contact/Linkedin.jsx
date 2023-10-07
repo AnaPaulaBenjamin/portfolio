@@ -27,8 +27,8 @@ const Linkedin = () => {
           y2="9.99999"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#A839FF" />
-          <stop offset="1" stopColor="#800ADD" />
+          <stop stopColor="var(--purple-1)" />
+          <stop offset="1" stopColor="var(--purple-2)" />
         </linearGradient>
       </defs>
     </svg>

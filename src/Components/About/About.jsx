@@ -1,18 +1,20 @@
 import React from 'react';
 import styles from './About.module.css';
 import ArrowText from '../StyledComponents/ArrowText';
-import TitleH2 from '../StyledComponents/SubTitle';
+import Title from '../StyledComponents/Title';
+import ImageBorder from '../StyledComponents/ImageBorder';
 
 const About = () => {
   return (
     <section>
       <div className={`${styles.about} container`}>
-        <TitleH2 text="sobre" />
+        <Title text="sobre" />
         <div className={styles.image}>
+          <ImageBorder />
           <img src="../src/assets/foto.jpg" alt="Foto - Ana Paula Benjamin" />
         </div>
         <div className={styles.aboutMe}>
-          <h3>um pouco sobre mim</h3>
+          <h3 className="subTitle">um pouco sobre mim</h3>
           <p>
             Sou uma entusiasta que descobriu a paixão pelo mundo da tecnologia e
             do design, buscando oportunidades em desenvolvimento front-end e

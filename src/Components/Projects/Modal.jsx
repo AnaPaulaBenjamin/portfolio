@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
-import IconModal from './IconModal';
+import IconModal from '../StyledComponents/IconModal';
 
 function ProjectModal({ isOpen, closeModal }) {
   return (

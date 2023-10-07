@@ -1,19 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Playfair+Display:wght@600&display=swap');
 
 :root {
-  --bg: #020617;
-  --bg-2: #13131f;
+  --background-1: #020617;
+  --background-2: #13131f;
   --text-1: #f5f5f5;
   --text-2: #d6d6d6;
-  --text-3: #7c7c8a;
-  --brand: #800ddd;
-  --bg-gradient: linear-gradient(165deg, #0e0919 30%, #312a5e 100%, #653a86);
-
-  /* --bg-2: #13131f;
-  --text-1: #f5f5f5;
-  --text-2: #d6d6d6;
-  --text-3: #7c7c8a;
-  --brand: #800ddd; */
+  --text-3: #10002b;
+  --gray-1: #7c7c7c;
+  --gray-2: #595959;
+  --gray-3: #404040;
+  --gray-4: #2e2e2e;
+  --purple-1: #800ddd;
+  --purple-2: #a839ff;
+  --purple-3: #b629f8;
+  --gradient: linear-gradient(to right, #800ddd, #a839ff);
+  --box-shadow-1: 0 0 15px rgba(168, 57, 255, 0.7);
+  --bg-gradient-dark: linear-gradient(175deg, #0e0919 25%, #653a86 100%);
+  --bg-gradient-ligth: linear-gradient(170deg, #653a86 30%, #af7ad8 100%);
 }
 
 * {
@@ -22,7 +25,7 @@
 
 body {
   margin: 0px;
-  background: var(--bg);
+  background: var(--background-1);
   color: var(--text-1);
   --type-first: 'Nunito', Arial, sans-serif;
   --type-second: 'Playfair Display', serif;
@@ -57,7 +60,7 @@ a {
 }
 
 .container {
-  max-width: 60rem;
+  max-width: 55rem;
   padding: 0 2rem;
   margin: 0 auto;
 }
@@ -65,6 +68,33 @@ a {
 .App {
   display: flex;
   flex-direction: column;
+}
+
+.background {
+  background: var(--bg-gradient-dark);
+}
+
+.subTitle {
+  font-family: var(--type-first);
+  color: var(--gray-1);
+  padding-bottom: 1.25rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.02rem;
+  font-weight: 400;
+}
+
+@media (max-width: 30rem) {
+  .subTitle {
+    font-size: 0.875rem;
+  }
+}
+
+.gradient {
+  background-image: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .animeLeft {
@@ -77,21 +107,5 @@ a {
   to {
     opacity: 1;
     transform: initial;
-  }
-}
-
-h3 {
-  padding-bottom: 1.5rem;
-  text-transform: uppercase;
-  font-family: var(--type-first);
-  color: var(--text-3);
-  font-size: 1rem;
-  letter-spacing: 0.05rem;
-  font-weight: 400;
-}
-
-@media (max-width: 30rem) {
-  h3 {
-    font-size: 0.8rem;
   }
 }

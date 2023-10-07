@@ -1,21 +1,19 @@
 .contact {
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
 }
 
 .networks {
   display: grid;
   grid-template-columns: repeat(4, auto);
-  gap: 1rem;
+  gap: 0.75rem;
   transition: box-shadow 0.5s ease-in-out;
 }
 
 .list {
   display: flex;
-  padding-top: 1rem;
+  padding-top: 1.25rem;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
   transition: 0.2s;
 }
 
@@ -25,43 +23,42 @@
 
 .list p {
   font-family: var(--type-first);
-  color: var(--white);
-  font-size: 1.2rem;
+  color: var(--text-1);
+  font-size: 1rem;
   letter-spacing: 0.1rem;
 }
 
 .list span {
   font-family: var(--type-first);
-  color: var(--gray);
+  color: var(--gray-1);
   font-size: 1rem;
 }
 
-.svg {
+.icon {
   display: flex;
   height: 50px;
   width: 50px;
   margin-bottom: 1rem;
   align-items: center;
   justify-content: center;
-  background-color: var(--bg2);
+  background-color: var(--background-2);
   border-radius: 50%;
 }
 
 @media (max-width: 50rem) {
+  .networks {
+    gap: 0.5rem;
+  }
   .list span {
     display: none;
-  }
-  .list p {
-    font-size: 1rem;
-    letter-spacing: 0;
   }
 }
 
 @media (max-width: 30rem) {
   .list p {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
-  .contact {
-    padding-bottom: 3rem;
+  .icon {
+    margin-bottom: 0.5rem;
   }
 }
