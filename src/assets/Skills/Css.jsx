@@ -5,38 +5,37 @@ const CSS = ({ width, height, fill }) => {
     <svg
       width={width || '25'}
       height={height || '28'}
-      viewBox="0 0 25 28"
-      fill="none"
+      viewBox="0 0 22 25"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clipPath="url(#clip0_221_239)">
-        <path
-          d="M12.5923 27.434L2.5625 24.6772L0.543672 0.548092L24.4538 0.596179L22.3189 24.6796L12.5923 27.434Z"
-          stroke="url(#paint0_linear_221_239)"
-        />
-        <path
-          d="M20.3329 5.3833H4.49561L4.92464 8.40362H12.44L5.0448 11.5081L5.47363 14.4279H16.3694L15.9746 18.5054L12.2855 19.2103L8.93976 18.3714L8.6823 16.0556H5.61093L6.02262 20.8717L12.6115 22.6672L18.926 20.7039L19.7325 11.2899H13.0575L20.3327 8.33658L20.3329 5.3833Z"
-          fill="url(#paint1_linear_221_239)"
-        />
-      </g>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M2.78045 21.2796L11.079 23.5605L19.1168 21.2844L20.9076 1.08343L1.08734 1.04357L2.78045 21.2796ZM1.84215 22.0588L11.083 24.5987L20.0521 22.0588L22 0.0856277L0 0.0413818L1.84215 22.0588Z"
+        fill="url(#paint0_linear_279_37)"
+      />
+      <path
+        d="M17.8929 4.73735H3.9561L4.33365 7.39522H10.9471L4.43939 10.1272L4.81676 12.6966H14.405L14.0576 16.2848L10.8112 16.9051L7.86695 16.1668L7.64039 14.1289H4.93758L5.29987 18.3672L11.0981 19.9472L16.6549 18.2195L17.3646 9.93511H11.4906L17.8927 7.33623L17.8929 4.73735Z"
+        fill="url(#paint1_linear_279_37)"
+      />
       <defs>
         <linearGradient
-          id="paint0_linear_221_239"
-          x1="4.43925"
-          y1="14"
-          x2="25"
-          y2="14"
+          id="paint0_linear_279_37"
+          x1="3.90654"
+          y1="12.32"
+          x2="22"
+          y2="12.32"
           gradientUnits="userSpaceOnUse"
         >
           <stop stopColor={fill || 'var(--purple-1)'} />
           <stop offset="1" stopColor={fill || 'var(--purple-2)'} />
         </linearGradient>
         <linearGradient
-          id="paint1_linear_221_239"
-          x1="7.30784"
-          y1="14.0252"
-          x2="20.3329"
-          y2="14.0252"
+          id="paint1_linear_279_37"
+          x1="3.90654"
+          y1="12.32"
+          x2="22"
+          y2="12.32"
           gradientUnits="userSpaceOnUse"
         >
           <stop stopColor={fill || 'var(--purple-1)'} />

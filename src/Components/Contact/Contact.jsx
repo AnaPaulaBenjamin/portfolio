@@ -1,95 +1,52 @@
 import React from 'react';
 import Styles from '../Contact/Contact.module.css';
-import Title from '../StyledComponents/Title';
-import Email from '../../assets/Contact/Email';
-import Github from '../../assets/Contact/Github';
-import Linkedin from '../../assets/Contact/Linkedin';
-import Number from '../../assets/Contact/Number';
+import StyledGradient from '../StyledComponents/Gradient';
+import StyledContactList from '../StyledComponents/ContactList';
+import IconEmail from '../../assets/Contact/Email';
+import IconGithub from '../../assets/Contact/Github';
+import IconLinkedin from '../../assets/Contact/Linkedin';
+import IconNumber from '../../assets/Contact/Number';
 
 const Contact = () => {
   return (
-    <section> 
+    <section id="contato">
       <div className={`${Styles.contact} container`}>
-        <Title text="contato" />
-        <h3 className='subTitle'>como me encontrar</h3>
-        <div className={Styles.networks}>
-          <div className={Styles.list}>
-            <a href="mailto:anabenjamin.dev@gmail.com">
-              <div className={Styles.icon}>
-                <Email />
-              </div>
-            </a>
-            <a href="mailto:anabenjamin.dev@gmail.com">
-              <p>E-mail</p>
-            </a>
-            <a href="mailto:anabenjamin.dev@gmail.com">
-              <span>anabenjamin.dev@gmail.com</span>
-            </a>
-          </div>
-          <div className={Styles.list}>
-            <a
-              href="https://github.com/AnaPaulaBenjamin"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className={Styles.icon}>
-                <Github />
-              </div>
-            </a>
-            <a
-              href="https://github.com/AnaPaulaBenjamin"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <p>GitHub</p>
-            </a>
-            <a
-              href="https://github.com/AnaPaulaBenjamin"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>@anapaulabenjamin</span>
-            </a>
-          </div>
-          <div className={Styles.list}>
-            <a
-              href="https://www.linkedin.com/in/ana-paula-benjamin/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className={Styles.icon}>
-                <Linkedin />
-              </div>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/ana-paula-benjamin/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <p>Linkedin</p>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/ana-paula-benjamin/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>@anapaulabenjamin</span>
-            </a>
-          </div>
-          <div className={Styles.list}>
-            <a href="tel:+55479997233267">
-              <div className={Styles.icon}>
-                <Number />
-              </div>
-            </a>
-            <a href="tel:+55479997233267">
-              <p>Telefone</p>
-            </a>
-            <a href="tel:+55479997233267">
-              <span>55 (47) 99723-3267</span>
-            </a>
-          </div>
+        <h2 className="title paddingTitle">
+          contato<StyledGradient>.</StyledGradient>{' '}
+        </h2>
+        <h3 className="subTitle">como me encontrar</h3>
+        <div className={Styles.contactList}>
+          <StyledContactList
+            href="mailto:anabenjamin.dev@gmail.com"
+            icon={<IconEmail />}
+            title="E-mail"
+            content="anabenjamin.dev@gmail.com"
+          />
+          <StyledContactList
+            href="https://github.com/AnaPaulaBenjamin"
+            icon={<IconGithub />}
+            title="GitHub"
+            content="@anapaulabenjamin"
+          />
+          <StyledContactList
+            href="https://www.linkedin.com/in/ana-paula-benjamin/"
+            icon={<IconLinkedin />}
+            title="LinkedIn"
+            content="@anapaulabenjamin"
+          />
+          <StyledContactList
+            href="tel:+55479997233267"
+            icon={<IconNumber />}
+            title="Telefone"
+            content="55 (47) 99723-3267"
+          />
         </div>
+        <p className={Styles.call}>
+          Se você está interessado em meu trabalho, deseja discutir
+          oportunidades de colaboração ou simplesmente deseja trocar ideias, não
+          hesite em entrar em contato. Estou sempre aberta a novas conexões e
+          oportunidades emocionantes.
+        </p>
       </div>
     </section>
   );

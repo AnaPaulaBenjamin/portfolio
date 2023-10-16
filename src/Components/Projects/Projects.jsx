@@ -1,84 +1,98 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Styles from '../Projects/Projects.module.css';
-import Title from '../StyledComponents/Title';
-import { Link } from 'react-router-dom';
-import IconHtml from '../../assets/Icons/Html';
-import IconCss from '../../assets/Icons/Css';
-import IconReact from '../../assets/Icons/React';
-import IconJavaScrip from '../../assets/Icons/JavaScript';
-import ArrowText from '../StyledComponents/ArrowText';
-import IconModal from '../StyledComponents/IconModal';
+import StyledGradient from '../StyledComponents/Gradient';
+import StyledMyProjects from '../StyledComponents/MyProjects';
+import IconHtml from '../../assets/Projects/Html';
+import IconCss from '../../assets/Projects/Css';
+import IconReact from '../../assets/Projects/React';
+import IconJavaScrip from '../../assets/Projects/JavaScript';
+import IconFigma from '../../assets/Projects/Figma';
+import ProjectsModal from '../Projects/ProjectsModal';
+
+const projectsData = [
+  {
+    id: 1,
+    src: '../../src/assets/image.jpg',
+    alt: 'foto do projeto 1',
+    title: 'Projeto 1',
+    description:
+      'Estou ansiosa para aplicar essas habilidades e conhecimentos no universo fascinante da criação digital.',
+    icons: [
+      <IconHtml />,
+      <IconCss />,
+      <IconJavaScrip />,
+      <IconReact />,
+      <IconFigma />,
+    ],
+  },
+  {
+    id: 2,
+    src: '../../src/assets/image.jpg',
+    alt: 'foto do projeto 2',
+    title: 'Projeto 2',
+    description:
+      'Estou ansiosa para aplicar essas habilidades e conhecimentos no universo fascinante da criação digital.',
+    icons: [
+      <IconHtml />,
+      <IconCss />,
+      <IconJavaScrip />,
+      <IconReact />,
+      <IconFigma />,
+    ],
+  },
+  {
+    id: 3,
+    src: '../../src/assets/image.jpg',
+    alt: 'foto do projeto 3',
+    title: 'Projeto 3',
+    description:
+      'Estou ansiosa para aplicar essas habilidades e conhecimentos no universo fascinante da criação digital.',
+    icons: [
+      <IconHtml />,
+      <IconCss />,
+      <IconJavaScrip />,
+      <IconReact />,
+      <IconFigma />,
+    ],
+  },
+];
 
 const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const openModal = (project) => {
+    setSelectedProject(project);
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+  };
+
   return (
-    <section>
+    <section id="projetos">
       <div className={`${Styles.projects} container`}>
-        <Title text="projetos" />
-        <h3>alguns dos meus projetos</h3>
-        <div className={Styles.container}>
-          <div className={Styles.project}>
-            <img src="../../src/assets/image.jpg" alt="Imagem do Projeto" />
-            <div className={Styles.prod}>
-              <div className={Styles.title}>
-                <h4>Projetos</h4>
-              </div>
-              <p>
-                Estou ansiosa para aplicar essas habilidades e conhecimentos no
-                universo fascinante da criação digital.
-              </p>
-              <div className={Styles.icons}>
-                <IconHtml />
-                <IconCss />
-                <IconJavaScrip />
-                <IconReact />
-              </div>
-            </div>
-          </div>
-          <div className={Styles.project}>
-            <img src="../../src/assets/image.jpg" alt="Imagem do Projeto" />
-            <div className={Styles.prod}>
-              <div className={Styles.title}>
-                <h4>Projetos</h4>
-                <Link to="/" aria-label="Tela maior">
-                  <IconModal />
-                </Link>
-              </div>
-              <p>
-                Estou ansiosa para aplicar essas habilidades e conhecimentos no
-                universo fascinante da criação digital.
-              </p>
-              <div className={Styles.icons}>
-                {/* <IconHtml />
-                <IconCss />
-                <IconJavaScrip />
-                <IconReact /> */}
-              </div>
-            </div>
-          </div>
-          <div className={Styles.project}>
-            <img src="../../src/assets/image.jpg" alt="Imagem do Projeto" />
-            <div className={Styles.prod}>
-              <div className={Styles.title}>
-                <h4>Projetos</h4>
-                <Link to="/" aria-label="Tela maior">
-                  <IconModal />
-                </Link>
-              </div>
-              <p>
-                Estou ansiosa para aplicar essas habilidades e conhecimentos no
-                universo fascinante da criação digital.
-              </p>
-              <div className={Styles.icons}>
-                {/* <IconHtml />
-                <IconCss />
-                <IconJavaScrip />
-                <IconReact /> */}
-              </div>
-            </div>
-          </div>
+        <h2 className="title paddingTitle">
+          projetos<StyledGradient>.</StyledGradient>
+        </h2>
+        <h3 className="subTitle">alguns dos meus projetos</h3>
+        <div className={Styles.myProjects}>
+          {projectsData.map((project) => (
+            <StyledMyProjects
+              key={project.id}
+              openModal={() => openModal(project)}
+              {...project}
+            />
+          ))}
         </div>
-        <ArrowText text="Ver mais " />
       </div>
+
+      {selectedProject && (
+        <ProjectsModal
+          isOpen={selectedProject !== null}
+          closeModal={closeModal}
+          selectedProject={selectedProject}
+        />
+      )}
     </section>
   );
 };

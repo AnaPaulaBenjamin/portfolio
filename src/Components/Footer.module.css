@@ -1,35 +1,21 @@
 .footer {
   display: flex;
-  flex-direction: column;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
 }
 
 .footer p {
-  padding: 3rem 3rem;
-  font-size: 1.25rem;
-  color: var(--text-2);
-  letter-spacing: 0.1rem;
-  font-family: var(--type-second);
-}
-
-.footer span {
-  font-size: 1rem;
   color: var(--gray-2);
   font-family: var(--type-first);
-}
-
-@media (max-width: 50rem) {
-  .footer p {
-    padding: 2rem 2rem;
-  }
+  font-size: 1rem;
 }
 
 @media (max-width: 30rem) {
-  .footer p {
-    padding-bottom: 2rem;
-    font-size: 1rem;
+  .footer {
+    height: 10vh;
   }
-  .footer span {
+  .footer p {
     font-size: 0.8rem;
   }
 }

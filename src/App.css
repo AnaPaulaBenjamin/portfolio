@@ -13,9 +13,10 @@
   --purple-1: #800ddd;
   --purple-2: #a839ff;
   --purple-3: #b629f8;
+  --bg-modal: rgba(2, 6, 23, 0.6);
   --gradient: linear-gradient(to right, #800ddd, #a839ff);
   --box-shadow-1: 0 0 15px rgba(168, 57, 255, 0.7);
-  --bg-gradient-dark: linear-gradient(175deg, #0e0919 25%, #653a86 100%);
+  --bg-gradient: linear-gradient(175deg, #0e0919 25%, #653a86 100%);
   --bg-gradient-ligth: linear-gradient(170deg, #653a86 30%, #af7ad8 100%);
 }
 
@@ -70,14 +71,31 @@ a {
   flex-direction: column;
 }
 
-.background {
-  background: var(--bg-gradient-dark);
+.background-home {
+  background: var(--bg-gradient);
+}
+
+.paddingTitle {
+  padding: 3rem 0 3rem 4rem;
+}
+
+.title {
+  font-family: var(--type-first);
+  color: var(--text-2);
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+@media (max-width: 50rem) {
+  .title {
+    font-size: 1.5rem;
+  }
 }
 
 .subTitle {
   font-family: var(--type-first);
   color: var(--gray-1);
-  padding-bottom: 1.25rem;
   text-transform: uppercase;
   font-size: 1rem;
   letter-spacing: 0.02rem;

@@ -15,7 +15,7 @@ const blink = keyframes`
   }
 `;
 
-const Detail = styled.svg`
+const Border = styled.svg`
   position: absolute;
   top: 0;
   left: 0;
@@ -42,7 +42,7 @@ const Gradient = styled.linearGradient`
 
 const ImageBorder = () => {
   return (
-    <Detail
+    <Border
       width="250"
       height="250"
       viewBox="0 0 258 258"
@@ -62,7 +62,7 @@ const ImageBorder = () => {
         strokeWidth="8"
         strokeLinecap="round"
       />
-    </Detail>
+    </Border>
   );
 };
 

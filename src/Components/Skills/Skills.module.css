@@ -8,6 +8,16 @@
   padding-bottom: 3rem;
 }
 
+.listSkills h3 {
+  padding-bottom: 1.25rem;
+}
+
+@media (max-width: 55rem) {
+  .skills h2 {
+    padding: 2rem 0 2rem 2rem;
+  }
+}
+
 @media (max-width: 30rem) {
   .listSkills > ul:first-of-type {
     padding-bottom: 2rem;

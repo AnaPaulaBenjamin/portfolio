@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Skills.module.css';
-import SkillsList from '../StyledComponents/SkillsList';
-import Title from '../StyledComponents/Title';
+import StyledSkillsList from '../StyledComponents/SkillsList';
+import StyledGradient from '../StyledComponents/Gradient';
 import IconHtml from '../../assets/Skills/Html';
 import IconCss from '../../assets/Skills/Css';
 import IconReact from '../../assets/Skills/React';
@@ -33,17 +33,19 @@ const Skills = () => {
   ];
 
   return (
-    <section>
+    <section id="habilidades">
       <div className={`${styles.skills} container`}>
-        <Title text="habilidades" />
+        <h2 className="title paddingTitle">
+          habilidades<StyledGradient>.</StyledGradient>
+        </h2>
         <div className={styles.listSkills}>
           <h3 className="subTitle">linguagens e tecnologias</h3>
           <ul className={styles.list}>
-            <SkillsList items={languagesAndTechnologies} />
+            <StyledSkillsList items={languagesAndTechnologies} />
           </ul>
           <h3 className="subTitle">conhecimentos</h3>
           <ul className={styles.list}>
-            <SkillsList items={knowledge} />
+            <StyledSkillsList items={knowledge} />
           </ul>
         </div>
       </div>

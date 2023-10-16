@@ -16,6 +16,7 @@
 .logo {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .nav {
@@ -27,6 +28,7 @@
 }
 
 .list {
+  cursor: pointer;
   padding: 0.25rem;
   font-size: 1rem;
   color: var(--text-1);
