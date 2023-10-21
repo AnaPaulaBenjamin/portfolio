@@ -5,7 +5,7 @@ const ListItem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: 0.2s;
+  transition: 0.4s;
 
   &:hover {
     transform: scale(1.2);
@@ -29,9 +29,8 @@ const Icon = styled.div`
 
 const Paragraph = styled.p`
   font-family: var(--type-first);
-  color: var(--text-1);
+  color: var(--text-2);
   font-size: 1rem;
-  letter-spacing: 0.1rem;
 
   @media (max-width: 30rem) {
     font-size: 0.75rem;

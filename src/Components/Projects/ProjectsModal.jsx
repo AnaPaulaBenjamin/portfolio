@@ -2,13 +2,16 @@ import React from 'react';
 import Modal from 'react-modal';
 import Styles from '../Projects/ProjectsModal.module.css';
 import IconModal from '../StyledComponents/IconModal';
+import StyledGradient from '../StyledComponents/Gradient';
 
 Modal.setAppElement('#root');
 
-function ProjectsModal({ isOpen, closeModal, selectedProject }) {
+function ProjectsModal({ isOpen, closeModal, selectedProject, isDarkMode }) {
+  const modalClassName = isDarkMode ? 'dark-mode' : 'light-mode';
+
   return (
     <Modal
-      className={Styles.modal}
+      className={`${Styles.modal} ${modalClassName}`}
       isOpen={isOpen}
       onRequestClose={closeModal}
       style={{
@@ -25,7 +28,7 @@ function ProjectsModal({ isOpen, closeModal, selectedProject }) {
           <h2 className={Styles.title}>
             <div>
               {selectedProject.title}
-              <span className="gradient">.</span>
+              <StyledGradient>.</StyledGradient>
             </div>
             <IconModal
               className={Styles.iconModal}
@@ -40,18 +43,20 @@ function ProjectsModal({ isOpen, closeModal, selectedProject }) {
             universo fascinante da criação digital.Estou ansiosa para aplicar
             essas habilidades e conhecimentos no universo fascinante da criação
             digital.Estou ansiosa para aplicar essas habilidades e conhecimentos
-            no universo fascinante da criação digital.
-          </p>
-          <p>
+            no universo fascinante da criação digital. <br />
             Estou ansiosa para aplicar essas habilidades e conhecimentos no
             universo fascinante da criação digital.Estou ansiosa para aplicar
             essas habilidades e conhecimentos no universo fascinante da criação
             digital.
           </p>
+          <p>
+            Estou ansiosa para aplicar essas habilidades e conhecimentos no
+            universo fascinante da criação digital.
+          </p>
           <div className={Styles.technologies}>
             <div className={Styles.icons}>{selectedProject.icons}</div>
             <a
-              className="subTitle gradient"
+              className="subTitle"
               href="https://dogs-origamid.vercel.app/"
               target="_blank"
             >

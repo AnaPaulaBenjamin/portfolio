@@ -5,11 +5,11 @@ import StyledContactList from '../StyledComponents/ContactList';
 import IconEmail from '../../assets/Contact/Email';
 import IconGithub from '../../assets/Contact/Github';
 import IconLinkedin from '../../assets/Contact/Linkedin';
-import IconNumber from '../../assets/Contact/Number';
+import IconWhatsapp from '../../assets/Contact/Whatsapp';
 
 const Contact = () => {
   return (
-    <section id="contato">
+    <section id="contato" className="background">
       <div className={`${Styles.contact} container`}>
         <h2 className="title paddingTitle">
           contato<StyledGradient>.</StyledGradient>{' '}
@@ -31,13 +31,13 @@ const Contact = () => {
           <StyledContactList
             href="https://www.linkedin.com/in/ana-paula-benjamin/"
             icon={<IconLinkedin />}
-            title="LinkedIn"
+            title="Linkedin"
             content="@anapaulabenjamin"
           />
           <StyledContactList
             href="tel:+55479997233267"
-            icon={<IconNumber />}
-            title="Telefone"
+            icon={<IconWhatsapp />}
+            title="Whatsapp"
             content="55 (47) 99723-3267"
           />
         </div>

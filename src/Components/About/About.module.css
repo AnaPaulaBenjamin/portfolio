@@ -34,10 +34,25 @@
 
 .aboutMe p {
   font-family: var(--type-first);
-  color: var(--text-1);
+  color: var(--text-2);
   font-size: 1rem;
+  font-weight: 400;
   line-height: 1.5rem;
   padding-bottom: 0.75rem;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.icons a {
+  background: var(--background-2);
+  padding: 0.6rem;
+  border-radius: 50%;
+  display: inline-flex;
 }
 
 @media (max-width: 55rem) {
@@ -45,16 +60,17 @@
     grid-template-columns: auto;
     grid-template-rows: repeat(3, auto);
     padding-top: 0;
+    padding-bottom: 1rem;
   }
   .about h2 {
-    padding: 2rem 0 2rem 2rem;
+    padding: 3rem 0 2rem 2rem;
   }
   .image {
     display: flex;
     height: 180px;
     width: 100%;
     justify-content: center;
-    padding: 1.5rem 0 0 0;
+    padding: 2rem 0 0 0;
   }
   .image img {
     border-radius: 50%;
@@ -71,11 +87,17 @@
 }
 
 @media (max-width: 30rem) {
+  .about{
+    padding-top: o;
+    padding-bottom: 1rem;
+  }
   .image {
-    padding: 1rem 0 0 0;
     height: 140px;
   }
   .aboutMe p {
     font-size: 1rem;
+  }
+  .icons {
+    justify-content: end;
   }
 }

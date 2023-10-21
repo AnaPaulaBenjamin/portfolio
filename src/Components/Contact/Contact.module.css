@@ -1,6 +1,7 @@
 .contact {
   display: flex;
   flex-direction: column;
+  padding-top: 1.5rem;
   padding-bottom: 3rem;
 }
 
@@ -13,7 +14,7 @@
 
 .call {
   font-family: var(--type-second);
-  color: var(--text-2);
+  color: var(--text-1);
   background: var(--background-2);
   border-radius: 10px;
   text-align: center;
@@ -24,20 +25,24 @@
 
 @media (max-width: 50rem) {
   .contact h2 {
-    padding: 2rem 0 2rem 2rem;
+    padding: 4rem 0 2rem 2rem;
   }
   .contactList {
+    padding: 3rem 0;
     gap: 0.5rem;
   }
   .call {
-    padding: 1rem 1rem 0;
+    padding: 1rem 1rem;
     font-size: 1rem;
   }
 }
 
 @media (max-width: 30rem) {
   .call {
-    padding: 0 0;
     font-size: 0.875rem;
+  }
+   .contact{
+    padding-top: 0;
+    padding-bottom: 1rem;
   }
 }

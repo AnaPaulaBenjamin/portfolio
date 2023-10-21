@@ -13,7 +13,7 @@
 
 @media (max-width: 30rem) {
   .footer {
-    height: 10vh;
+    height: 15vh;
   }
   .footer p {
     font-size: 0.8rem;

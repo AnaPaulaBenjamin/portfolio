@@ -29,12 +29,12 @@ const Title = styled.div`
   font-family: var(--type-first);
   color: var(--text-2);
   padding-top: 0.75rem;
-  padding-bottom: 1rem;
+  padding-bottom: .5rem;
 `;
 
 const Description = styled.p`
   font-size: 0.75rem;
-  color: var(--text-2);
+  color: var(--gray-3);
   font-family: var(--type-first);
   padding-bottom: 1rem;
 `;

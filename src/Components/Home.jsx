@@ -6,10 +6,10 @@ import StyledGradient from './StyledComponents/Gradient';
 const Home = () => {
   return (
     <section id="home" className="background-home">
-      <div className={`${styles.home} container`}>
+      <div className={`${styles.home} container animeLeft`}>
         <div className={styles.iconHello}>
           <span>👋🏻</span>
-          <p className="gradient">Olá, meu nome é</p>
+          <p className={styles.hello}>Olá, meu nome é</p>
         </div>
         <h1>
           Ana Paula

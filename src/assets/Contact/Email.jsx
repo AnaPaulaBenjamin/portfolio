@@ -24,8 +24,8 @@ const Email = () => {
           y2="8.5"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="var(--purple-1)" />
-          <stop offset="1" stopColor="var(--purple-2)" />
+          <stop stopColor="var(--primary-1)" />
+          <stop offset="1" stopColor="var(--primary-2)" />
         </linearGradient>
       </defs>
     </svg>

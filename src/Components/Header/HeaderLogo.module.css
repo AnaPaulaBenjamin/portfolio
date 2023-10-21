@@ -1,0 +1,25 @@
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.listLogo {
+  padding: 0 0.2rem 0 0.25rem;
+}
+
+.list {
+  display: inline-block;
+  font-family: var(--type-second);
+  color: var(--text-2);
+  padding: 0.25rem 0;
+  letter-spacing: 0.05rem;
+  font-size: 1rem;
+  font-weight: 800;
+  transition: transform 0.2s, color 0.4s;
+}
+
+.list:hover {
+  transform: translateY(-5px);
+  color: var(--primary-1);
+}

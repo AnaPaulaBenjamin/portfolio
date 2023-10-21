@@ -1,10 +1,10 @@
 import React from 'react';
 
-const JavaScript = ({ width, height, fill }) => {
+const JavaScript = () => {
   return (
     <svg
-      width={width || '22'}
-      height={height || '24'}
+      width="22"
+      height="24"
       viewBox="0 0 22 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -24,8 +24,8 @@ const JavaScript = ({ width, height, fill }) => {
           y2="12"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor={fill || 'var(--purple-1)'} />
-          <stop offset="1" stopColor={fill || 'var(--purple-2)'} />
+          <stop stopColor="var(--primary-1)" />
+          <stop offset="1" stopColor="var(--primary-2)" />
         </linearGradient>
       </defs>
     </svg>

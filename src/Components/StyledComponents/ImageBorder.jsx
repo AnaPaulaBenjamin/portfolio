@@ -7,11 +7,11 @@ const blink = keyframes`
   }
   50% {
     opacity: 1;
-    stop-color: var(--purple-1); 
+    stop-color: var(--primary-1); 
   }
   100% {
     opacity: 0.5;
-    stop-color: var(--purple-2); 
+    stop-color: var(--primary-2); 
   }
 `;
 
@@ -30,13 +30,10 @@ const Border = styled.svg`
 
 const Gradient = styled.linearGradient`
   stop:nth-child(1) {
-    stop-color: var(--purple-1);
+    stop-color: var(--primary-1);
   }
   stop:nth-child(2) {
-    stop-color: var(--purple-2);
-  }
-  stop:nth-child(3) {
-    stop-color: var(--purple-3);
+    stop-color: var(--primary-2);
   }
 `;
 
@@ -52,7 +49,6 @@ const ImageBorder = () => {
       <defs>
         <Gradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" />
-          <stop offset="50%" />
           <stop offset="100%" />
         </Gradient>
       </defs>

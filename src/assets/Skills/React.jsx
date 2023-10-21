@@ -1,10 +1,10 @@
 import React from 'react';
 
-const IconReact = ({ width, height, fill }) => {
+const IconReact = () => {
   return (
     <svg
-      width={width || '25'}
-      height={height || '22'}
+      width="25"
+      height="22"
       viewBox="0 0 25 22"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -26,8 +26,8 @@ const IconReact = ({ width, height, fill }) => {
           y2="11"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor={fill || 'var(--purple-1)'} />
-          <stop offset="1" stopColor={fill || 'var(--purple-2)'} />
+          <stop stopColor="var(--primary-1)" />
+          <stop offset="1" stopColor="var(--primary-2)" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_201_105"
@@ -37,8 +37,8 @@ const IconReact = ({ width, height, fill }) => {
           y2="11"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor={fill || 'var(--purple-1)'} />
-          <stop offset="1" stopColor={fill || 'var(--purple-2)'} />
+          <stop stopColor="var(--primary-1)" />
+          <stop offset="1" stopColor="var(--primary-2)" />
         </linearGradient>
       </defs>
     </svg>

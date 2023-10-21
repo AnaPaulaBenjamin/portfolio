@@ -1,12 +1,15 @@
 import React from 'react';
 import styles from './About.module.css';
 import Foto from '../../assets/foto.jpg';
+import IconGitHub from '../../assets/Contact/Github';
+import IconLinkedin from '../../assets/Contact/Linkedin';
+import IconInstagran from '../../assets/Contact/Instagran';
 import StyledGradient from '../StyledComponents/Gradient';
 import StyledImageBorder from '../StyledComponents/ImageBorder';
 
 const About = () => {
   return (
-    <section id="sobre">
+    <section id="sobre" className="background">
       <div className={`${styles.about} container`}>
         <h2 className="title paddingTitle">
           sobre<StyledGradient>.</StyledGradient>
@@ -35,6 +38,29 @@ const About = () => {
             aplicar essas habilidades e conhecimentos no universo fascinante da
             criação digital.
           </p>
+          <div className={styles.icons}>
+            <a
+              href="https://github.com/AnaPaulaBenjamin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconGitHub width="18px" height="18px" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ana-paula-benjamin/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconLinkedin width="17px" height="18px" />
+            </a>
+            <a
+              href="https://www.instagram.com/ana.benjamin0/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconInstagran width="18px" height="18px" />
+            </a>
+          </div>
         </div>
       </div>
     </section>

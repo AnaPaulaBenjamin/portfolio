@@ -57,7 +57,7 @@ const projectsData = [
   },
 ];
 
-const Projects = () => {
+const Projects = ({ isDarkMode }) => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const openModal = (project) => {
@@ -69,7 +69,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projetos">
+    <section id="projetos" className="background">
       <div className={`${Styles.projects} container`}>
         <h2 className="title paddingTitle">
           projetos<StyledGradient>.</StyledGradient>
@@ -91,6 +91,7 @@ const Projects = () => {
           isOpen={selectedProject !== null}
           closeModal={closeModal}
           selectedProject={selectedProject}
+          isDarkMode={isDarkMode}
         />
       )}
     </section>

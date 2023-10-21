@@ -1,6 +1,5 @@
 .modal {
   position: absolute;
-  background-color: var(--bg-modal);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -48%);
@@ -11,7 +10,9 @@
   justify-content: center;
   margin: 0 auto;
   overflow: hidden;
+  z-index: 1000;
   border-radius: 4px;
+  box-shadow: var(--box-shadow-2);
 }
 
 .container {
@@ -35,23 +36,24 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: var(--background-2);
   padding: 0 2rem 0 1rem;
-  background: var(--background-2);
   height: 80vh;
   overflow: hidden;
 }
 
 .container h2 {
   font-family: var(--type-first);
-  color: var(--text-2);
+  color: var(--text-1);
   padding-top: 2rem;
   padding-bottom: 1rem;
 }
 
 .project p {
   font-family: var(--type-first);
-  color: var(--gray-1);
+  color: var(--gray-3);
   font-size: 1rem;
+  font-weight: 400;
   letter-spacing: 0.02rem;
   padding-bottom: 1rem;
 }
@@ -63,8 +65,13 @@
   align-items: center;
 }
 
+.technologies a {
+  color: var(--gray-2);
+  font-weight: 600;
+}
+
 .technologies a:hover {
-  color: var(--gray-1);
+  color: var(--primary-1);
 }
 
 .icons {

@@ -15,13 +15,14 @@ const List = styled.ul`
 
 const ListItem = styled.li`
   background-color: var(--background-2);
-  color: var(--text-1);
+  color: var(--text-2);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   justify-content: center;
   gap: 1rem;
+  font-weight: 600;
   letter-spacing: 0.05rem;
   padding: 1rem;
   text-transform: uppercase;

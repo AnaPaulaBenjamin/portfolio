@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Svg = styled.svg`
   position: absolute;
   bottom: -1px;
-  z-index: 0;
+  z-index: 10;
 `;
 
 const BgHome = () => {

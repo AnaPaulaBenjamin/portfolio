@@ -1,23 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Playfair+Display:wght@600&display=swap');
 
-:root {
+.dark-mode {
   --background-1: #020617;
   --background-2: #13131f;
-  --text-1: #f5f5f5;
-  --text-2: #d6d6d6;
-  --text-3: #10002b;
-  --gray-1: #7c7c7c;
-  --gray-2: #595959;
-  --gray-3: #404040;
-  --gray-4: #2e2e2e;
-  --purple-1: #800ddd;
-  --purple-2: #a839ff;
-  --purple-3: #b629f8;
-  --bg-modal: rgba(2, 6, 23, 0.6);
-  --gradient: linear-gradient(to right, #800ddd, #a839ff);
-  --box-shadow-1: 0 0 15px rgba(168, 57, 255, 0.7);
-  --bg-gradient: linear-gradient(175deg, #0e0919 25%, #653a86 100%);
-  --bg-gradient-ligth: linear-gradient(170deg, #653a86 30%, #af7ad8 100%);
+  --text-1: #fdfdfd;
+  --text-2: #f5f5f5;
+  --gray-1: #595959;
+  --gray-2: #7c7c7c;
+  --gray-3: #96969f;
+  --primary-1: #800ddd;
+  --primary-2: #a839ff;
+  --secondary-1: #c2185b;
+  --bg-mode: #302056;
+  --mode: #6649a7;
+  --header: rgba(23, 16, 40, 0.8);
+  --box-shadow-1: 0 0 15px rgba(168, 57, 255, 0.8);
+  --box-shadow-2: 0 0 10px rgba(173, 109, 223, 0.8);
+  --gradient-1: linear-gradient(to right, #7508cd, #ec407a);
+  --gradient-2: linear-gradient(to right, #800ddd, #ad6ddf);
+  --bg-gradient: -webkit-linear-gradient(270deg, #171028 10%, #6649a7);
+}
+
+.light-mode {
+  --background-1: #fdfdfd;
+  --background-2: #f5f5f5;
+  --text-1: #120239;
+  --text-2: #070510;
+  --gray-1: #96969f;
+  --gray-2: #7c7c7c;
+  --gray-3: #595959;
+  --primary-1: #c2185b;
+  --primary-2: #ec407a;
+  --secondary-1: #800ddd;
+  --bg-mode: #e7cbfd;
+  --mode: #ad6ddf;
+  --header: rgba(173, 109, 223, 0.8);
+  --box-shadow-1: 0 0 15px rgba(168, 57, 255, 0.8);
+  --box-shadow-2: 0 0 10px rgba(173, 109, 223, 0.8);
+  --gradient-1: linear-gradient(to right, #7508cd, #ec407a);
+  --gradient-2: linear-gradient(to right, #c2185b, #eb6492);
+  --bg-gradient: -webkit-linear-gradient(270deg, #ad6ddf 10%, #fbf6ff);
 }
 
 * {
@@ -26,8 +48,6 @@
 
 body {
   margin: 0px;
-  background: var(--background-1);
-  color: var(--text-1);
   --type-first: 'Nunito', Arial, sans-serif;
   --type-second: 'Playfair Display', serif;
 }
@@ -60,6 +80,10 @@ a {
   text-decoration: none;
 }
 
+.background {
+  background: var(--background-1);
+}
+
 .container {
   max-width: 55rem;
   padding: 0 2rem;
@@ -81,7 +105,7 @@ a {
 
 .title {
   font-family: var(--type-first);
-  color: var(--text-2);
+  color: var(--text-1);
   letter-spacing: 0.1rem;
   font-weight: 600;
   font-size: 2rem;
@@ -95,7 +119,7 @@ a {
 
 .subTitle {
   font-family: var(--type-first);
-  color: var(--gray-1);
+  color: var(--gray-3);
   text-transform: uppercase;
   font-size: 1rem;
   letter-spacing: 0.02rem;
@@ -106,13 +130,6 @@ a {
   .subTitle {
     font-size: 0.875rem;
   }
-}
-
-.gradient {
-  background-image: var(--gradient);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
 }
 
 .animeLeft {
@@ -126,4 +143,11 @@ a {
     opacity: 1;
     transform: initial;
   }
+}
+
+#hero {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }

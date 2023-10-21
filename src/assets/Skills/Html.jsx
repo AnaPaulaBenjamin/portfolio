@@ -1,10 +1,10 @@
 import React from 'react';
 
-const HTML = ({ width, height, fill }) => {
+const HTML = () => {
   return (
     <svg
-      width={width || '25'}
-      height={height || '28'}
+      width="25"
+      height="28"
       viewBox="0 0 25 28"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -28,8 +28,8 @@ const HTML = ({ width, height, fill }) => {
           y2="14"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor={fill || 'var(--purple-1)'} />
-          <stop offset="1" stopColor={fill || 'var(--purple-2)'} />
+          <stop stopColor="var(--primary-1)" />
+          <stop offset="1" stopColor="var(--primary-2)" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_221_235"
@@ -39,8 +39,8 @@ const HTML = ({ width, height, fill }) => {
           y2="13.9076"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor={fill || 'var(--purple-1)'} />
-          <stop offset="1" stopColor={fill || 'var(--purple-2)'} />
+          <stop stopColor="var(--primary-1)" />
+          <stop offset="1" stopColor="var(--primary-2)" />
         </linearGradient>
       </defs>
     </svg>

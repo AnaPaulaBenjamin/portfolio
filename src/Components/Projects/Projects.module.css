@@ -1,8 +1,8 @@
 .projects {
   display: flex;
   flex-direction: column;
-  padding-bottom: 3rem;
-}
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;}
 
 .myProjects {
   display: grid;
@@ -20,9 +20,10 @@
 @media (max-width: 35rem) {
   .project {
     flex-direction: column;
-  }
-  .projects h3 {
+    padding-top: 0;
     padding-bottom: 1rem;
-    padding-top: 2rem;
+  }
+  .projects h2 {
+    padding: 4rem 0 2rem 2rem;
   }
 }
