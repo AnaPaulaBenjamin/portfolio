@@ -1,23 +1,10 @@
 import React, { useState } from 'react';
-import { Link as ScrollLink } from 'react-scroll';
+import { Link } from './SharedComponents';
 import { useLocation } from 'react-router-dom';
 import styles from './MobileMenu.module.css';
 import stylesHeader from './Header.module.css';
 import Moon from '../../assets/Mode/moon';
 import Sun from '../../assets/Mode/Sun';
-
-const Link = ({ to, label, customClass }) => (
-  <ScrollLink
-    to={to}
-    spy={true}
-    smooth={true}
-    duration={500}
-    className={customClass}
-    aria-label={label}
-  >
-    {label}
-  </ScrollLink>
-);
 
 const MobileMenu = ({ isDarkMode, toggleDarkMode }) => {
   const [menuOpen, setMenuOpen] = useState(false);

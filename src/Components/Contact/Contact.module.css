@@ -12,11 +12,12 @@
   transition: box-shadow 0.5s ease-in-out;
 }
 
-.call {
-  font-family: var(--type-second);
-  color: var(--text-1);
+.contactMe {
+  font-family: var(--type-first);
+  color: var(--text-2);
   background: var(--background-2);
   border-radius: 10px;
+  font-weight: 600;
   text-align: center;
   padding: 3rem;
   font-size: 1.25rem;
@@ -24,21 +25,18 @@
 }
 
 @media (max-width: 50rem) {
-  .contact h2 {
-    padding: 4rem 0 2rem 2rem;
-  }
   .contactList {
     padding: 3rem 0;
     gap: 0.5rem;
   }
-  .call {
+  .contactMe {
     padding: 1rem 1rem;
     font-size: 1rem;
   }
 }
 
 @media (max-width: 30rem) {
-  .call {
+  .contactMe {
     font-size: 0.875rem;
   }
    .contact{

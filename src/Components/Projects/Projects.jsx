@@ -1,58 +1,66 @@
 import React, { useState } from 'react';
 import Styles from '../Projects/Projects.module.css';
-import StyledGradient from '../StyledComponents/Gradient';
-import StyledMyProjects from '../StyledComponents/MyProjects';
+import { useInView } from 'react-intersection-observer';
+import MyProjects from './MyProjects';
 import IconHtml from '../../assets/Projects/Html';
 import IconCss from '../../assets/Projects/Css';
 import IconReact from '../../assets/Projects/React';
 import IconJavaScrip from '../../assets/Projects/JavaScript';
 import IconFigma from '../../assets/Projects/Figma';
 import ProjectsModal from '../Projects/ProjectsModal';
+import { useTrail, animated } from 'react-spring';
+import BodySvg from '../../assets/SVGBody/Svg2';
 
 const projectsData = [
   {
     id: 1,
-    src: '../../src/assets/image.jpg',
-    alt: 'foto do projeto 1',
-    title: 'Projeto 1',
+    src: '../../src/assets/dogs.png',
+    modalImage: '../../src/assets/dogs-modal.png',
+    alt: 'Dogs - Rede Social para Pets',
+    title: 'Rede Social Dogs',
     description:
-      'Estou ansiosa para aplicar essas habilidades e conhecimentos no universo fascinante da criação digital.',
-    icons: [
-      <IconHtml />,
-      <IconCss />,
-      <IconJavaScrip />,
-      <IconReact />,
-      <IconFigma />,
+      'Criação da aplicação Dogs, rede social para cachorros. A tela inicial apresenta o feed de postagens e é possível navegar através de fotos e autor. Logado como usuário, é possível comentar as postagens.',
+    icons: [<IconHtml />, <IconCss />, <IconJavaScrip />, <IconReact />],
+    externalLink: 'https://dogs-origamid.vercel.app/',
+    paragraphs1: [
+      'Projeto do curso React Completo da Origamid, utilizando a tecnologia React, uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web. Possui a capacidade de ser declarativa, eficiente, flexível e extremamente componentizável. Neste projeto, a integração com o back-end se deu totalmente através de API (Application Programming Interface).',
+    ],
+    paragraphs2: [
+      'Na página do usuário, é possível visualizar o seu feed, postar fotos e acessar as estatísticas de visualizações. O site está totalmente funcional.',
     ],
   },
   {
     id: 2,
-    src: '../../src/assets/image.jpg',
-    alt: 'foto do projeto 2',
-    title: 'Projeto 2',
+    src: '../../src/assets/bikcraft.webp',
+    modalImage: '../../src/assets/bikcraft-modal.png',
+    alt: 'Bikcraft - Bicicletas Elétricas',
+    title: 'Bikcraft',
     description:
-      'Estou ansiosa para aplicar essas habilidades e conhecimentos no universo fascinante da criação digital.',
-    icons: [
-      <IconHtml />,
-      <IconCss />,
-      <IconJavaScrip />,
-      <IconReact />,
-      <IconFigma />,
+      'Bikcraf é um site de vendas de bicicletas fictício. O projeto foi desenvolvido por completo, desde a prototipagem no Figma, a codificação do HTML, a estilização no CSS e as animações em JavaScript.',
+    icons: [<IconHtml />, <IconCss />, <IconJavaScrip />, <IconFigma />],
+    externalLink: 'https://anapaulabenjamin.github.io/bikcraft/',
+    paragraphs1: [
+      'É um projeto que simula uma loja de venda de biciletas costumizadas e seguros, confeccionado com HTML, CSS e JavaScript, com o PHP para o envio de e-mail na página de contatos.',
+    ],
+    paragraphs2: [
+      'Este é um projeto desenvolvido através do curso de HTML e CSS Completo da Origamid. Foram realizados poucos ajustes entre o projeto do curso e a subida no servidor.',
     ],
   },
   {
     id: 3,
-    src: '../../src/assets/image.jpg',
-    alt: 'foto do projeto 3',
-    title: 'Projeto 3',
+    src: '../../src/assets/shorts-summary.jpeg',
+    modalImage: '../../src/assets/shorts-summary-modal.png',
+    alt: 'Shorts Summary- Resumo de Shorts',
+    title: 'Shorts Summary',
     description:
-      'Estou ansiosa para aplicar essas habilidades e conhecimentos no universo fascinante da criação digital.',
-    icons: [
-      <IconHtml />,
-      <IconCss />,
-      <IconJavaScrip />,
-      <IconReact />,
-      <IconFigma />,
+      'Shorts Summary é uma aplicação web para criar resumo de vídeos shorts do Youtube utilizando Inteligência Artificial para transcrever o conteúdo do vídeo e realizar o resumo do conteúdo.',
+    icons: [<IconHtml />, <IconCss />, <IconJavaScrip />],
+    externalLink: 'https://shorts-summary-nine.vercel.app/',
+    paragraphs1: [
+      'Esse projeto é desenvolvido na trilha Foundations na edição NLW IA da Rocketseat. Construído com marcação HTML5 semântica, propriedades personalizadas CSS.',
+    ],
+    paragraphs2: [
+      'Tecnologias e Bibliotecas utilizadas: Vite - Express - Cors - Axios - ydtl-core: Usado para extrair e baixar vídeos do YouTube - whisper: Sistema de reconhecimento automático de fala (ASR) treinado - node-wav: Fornece funcionalidades para ler e escrever arquivos de áudio no formato WAVE da Microsoft - FFmpeg: Solução de código aberto que permite gravar, converter e transmitir áudio e vídeo - @xenova/transformers: Aprendizado de máquina para a web.',
     ],
   },
 ];
@@ -68,20 +76,35 @@ const Projects = ({ isDarkMode }) => {
     setSelectedProject(null);
   };
 
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+
+  const trail = useTrail(projectsData.length, {
+    opacity: inView ? 1 : 0,
+    transform: inView ? 'translateY(0)' : 'translateY(25px)',
+    config: { duration: 800 },
+  });
+
   return (
     <section id="projetos" className="background">
-      <div className={`${Styles.projects} container`}>
-        <h2 className="title paddingTitle">
-          projetos<StyledGradient>.</StyledGradient>
+      <div
+        ref={ref}
+        className={`${Styles.projects} container ${inView ? 'visible' : ''}`}
+      >
+        <BodySvg />
+        <h2 className="title paddingTitle animeLeft">
+          projetos<span className="gradient">.</span>
         </h2>
-        <h3 className="subTitle">alguns dos meus projetos</h3>
+        <h3 className="subTitle animeLeft">alguns dos meus projetos</h3>
         <div className={Styles.myProjects}>
-          {projectsData.map((project) => (
-            <StyledMyProjects
-              key={project.id}
-              openModal={() => openModal(project)}
-              {...project}
-            />
+          {trail.map((style, index) => (
+            <animated.div style={style} key={projectsData[index].id}>
+              <MyProjects
+                openModal={() => openModal(projectsData[index])}
+                {...projectsData[index]}
+              />
+            </animated.div>
           ))}
         </div>
       </div>

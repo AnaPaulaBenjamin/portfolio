@@ -1,23 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link as ScrollLink } from 'react-scroll';
+import { Link } from './SharedComponents';
 import styles from './Header.module.css';
 import HeaderLogo from './HeaderLogo';
 import Moon from '../../assets/Mode/moon.jsx';
 import Sun from '../../assets/Mode/Sun.jsx';
 import MobileMenu from './MobileMenu';
-
-const Link = ({ to, label, customClass }) => (
-  <ScrollLink
-    to={to}
-    spy={true}
-    smooth={true}
-    duration={500}
-    className={customClass}
-    aria-label={label}
-  >
-    {label}
-  </ScrollLink>
-);
+import { useTrail, animated } from 'react-spring';
 
 const Header = ({ isDarkMode, toggleDarkMode }) => {
   const [isMobile, setIsMobile] = useState(
@@ -40,6 +28,19 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
     };
   }, []);
 
+  const navItems = [
+    { label: 'Sobre', to: 'sobre' },
+    { label: 'Habilidades', to: 'habilidades' },
+    { label: 'Projetos', to: 'projetos' },
+    { label: 'Contato', to: 'contato' },
+  ];
+
+  const trail = useTrail(navItems.length, {
+    from: { opacity: 0, transform: 'translateX(-20px)' },
+    to: { opacity: 1, transform: 'translateX(0)' },
+    config: { duration: 600 },
+  });
+
   return (
     <header
       className={`${styles.header} ${isDarkMode ? styles.dark : styles.light}`}
@@ -54,26 +55,15 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
         >
           {!isMobile && (
             <ul className={styles.nav}>
-              <li>
-                <Link to="sobre" label="Sobre" customClass={styles.list} />
-              </li>
-              <li>
-                <Link
-                  to="habilidades"
-                  label="Habilidades"
-                  customClass={styles.list}
-                />
-              </li>
-              <li>
-                <Link
-                  to="projetos"
-                  label="Projetos"
-                  customClass={styles.list}
-                />
-              </li>
-              <li>
-                <Link to="contato" label="Contato" customClass={styles.list} />
-              </li>
+              {trail.map((style, index) => (
+                <animated.li key={index} style={style}>
+                  <Link
+                    to={navItems[index].to}
+                    label={navItems[index].label}
+                    customClass={styles.list}
+                  />
+                </animated.li>
+              ))}
               <li className={styles.mode}>
                 <div
                   className={styles.themeToggle}

@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './HeaderLogo.module.css';
 import { Link } from 'react-scroll';
-import IconLogo1 from '../../assets/Logo/Logo-1';
-import IconLogo2 from '../../assets/Logo/Logo-2';
+import IconLogo1 from '../../assets/Logo/Logo1';
+import IconLogo2 from '../../assets/Logo/Logo2';
 
 const HeaderLogo = () => {
   return (
     <Link
-      className={`${styles.logo}`}
+      className={styles.logo}
       to="home"
       spy={true}
       smooth={true}

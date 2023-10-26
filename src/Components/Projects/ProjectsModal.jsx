@@ -1,12 +1,15 @@
 import React from 'react';
 import Modal from 'react-modal';
-import Styles from '../Projects/ProjectsModal.module.css';
-import IconModal from '../StyledComponents/IconModal';
-import StyledGradient from '../StyledComponents/Gradient';
+import Styles from './ProjectsModal.module.css';
+import IconModal from './ModalIcon';
 
 Modal.setAppElement('#root');
 
 function ProjectsModal({ isOpen, closeModal, selectedProject, isDarkMode }) {
+  if (!isOpen || !selectedProject) {
+    return null;
+  }
+
   const modalClassName = isDarkMode ? 'dark-mode' : 'light-mode';
 
   return (
@@ -22,42 +25,31 @@ function ProjectsModal({ isOpen, closeModal, selectedProject, isDarkMode }) {
     >
       <div className={Styles.container}>
         <div>
-          <img src={selectedProject.src} alt={selectedProject.alt} />
+          <img src={selectedProject.modalImage} alt={selectedProject.alt} />
         </div>
         <div className={Styles.project}>
           <h2 className={Styles.title}>
             <div>
               {selectedProject.title}
-              <StyledGradient>.</StyledGradient>
+              <span className="gradient"> .</span>
             </div>
             <IconModal
               className={Styles.iconModal}
               isOpen={isOpen}
-              openModal={selectedProject ? () => {} : closeModal}
+              openModal={closeModal}
               closeModal={closeModal}
             />
           </h2>
-          <p>{selectedProject.description}</p>
-          <p>
-            Estou ansiosa para aplicar essas habilidades e conhecimentos no
-            universo fascinante da criação digital.Estou ansiosa para aplicar
-            essas habilidades e conhecimentos no universo fascinante da criação
-            digital.Estou ansiosa para aplicar essas habilidades e conhecimentos
-            no universo fascinante da criação digital. <br />
-            Estou ansiosa para aplicar essas habilidades e conhecimentos no
-            universo fascinante da criação digital.Estou ansiosa para aplicar
-            essas habilidades e conhecimentos no universo fascinante da criação
-            digital.
-          </p>
-          <p>
-            Estou ansiosa para aplicar essas habilidades e conhecimentos no
-            universo fascinante da criação digital.
-          </p>
+          <div className={Styles.description}>
+            <p>{selectedProject.description}</p>
+            <p>{selectedProject.paragraphs1}</p>
+            <p>{selectedProject.paragraphs2}</p>
+          </div>
           <div className={Styles.technologies}>
             <div className={Styles.icons}>{selectedProject.icons}</div>
             <a
               className="subTitle"
-              href="https://dogs-origamid.vercel.app/"
+              href={selectedProject.externalLink}
               target="_blank"
             >
               Projeto

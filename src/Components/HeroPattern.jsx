@@ -4,8 +4,8 @@ export function HeroPattern() {
   return (
     <svg
       id="hero"
-      width="1217"
-      height="479"
+      width="100%"
+      height="100%"
       viewBox="0 0 1217 479"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -160,7 +160,6 @@ export function HeroPattern() {
         strokeWidth="0.5"
         strokeDasharray="8 8"
       />
-
       <defs>
         <motion.linearGradient
           animate={{
@@ -170,7 +169,7 @@ export function HeroPattern() {
             y2: [479 * 2, 479],
           }}
           transition={{
-            duration: 5,
+            duration: 8,
             repeat: Infinity,
             ease: 'linear',
           }}
@@ -181,7 +180,6 @@ export function HeroPattern() {
           <stop stopColor="var(--primary-2)" />
           <stop offset="1" stopColor="var(--secondary-1)" stopOpacity="0" />
         </motion.linearGradient>
-
         <linearGradient
           id="paint0_linear_1967_382"
           x1="61.5"

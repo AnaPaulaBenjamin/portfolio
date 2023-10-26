@@ -1,80 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
-import StyledScroll from './Components/StyledComponents/ScrollTop';
+import { useAppLogic } from './Components/AppLogic';
+import ScrollTop from './Components/ScrollTop';
 import Header from './Components/Header/Header';
-import Home from './Components/Home';
+import Home from './Components/Home/Home';
 import About from './Components/About/About';
 import Skills from './Components/Skills/Skills';
 import Projects from './Components/Projects/Projects';
 import Contact from './Components/Contact/Contact';
 import Footer from './Components/Footer';
-import { HeroPattern } from './Components/HeroPattern';
-
-function PageWithHeroPattern({ children }) {
-  return (
-    <div>
-      <HeroPattern />
-      {children}
-    </div>
-  );
-}
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
-  const [showScrollButton, setShowScrollButton] = useState(false);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
-  useEffect(() => {
-    function customizeScrollbar() {
-      const bgMode = isDarkMode ? '#020617' : '#fdfdfd';
-      const mode = isDarkMode ? '#6649a7' : '#ad6ddf';
-      const scrollbarStyle = `
-        ::-webkit-scrollbar {
-          width: 8px;
-        }
-        ::-webkit-scrollbar-thumb {
-          background: ${mode};
-          border-radius: 4px;
-        }
-        ::-webkit-scrollbar-track {
-          background: ${bgMode};
-        }
-      `;
-
-      const style = document.createElement('style');
-      style.textContent = scrollbarStyle;
-      document.head.appendChild(style);
-    }
-
-    customizeScrollbar();
-  }, [isDarkMode]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const homeSection = document.getElementById('home');
-      if (homeSection) {
-        const scrollPosition = window.scrollY;
-        const homeSectionHeight = homeSection.clientHeight;
-        const halfwayPoint = homeSectionHeight / 6;
-        setShowScrollButton(scrollPosition > halfwayPoint);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  const { isDarkMode, toggleDarkMode, showScrollButton } = useAppLogic();
 
   return (
     <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>
       <BrowserRouter>
-        {showScrollButton && <StyledScroll />}
+        {showScrollButton && <ScrollTop />}
         <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
         <Home />
         <About />
@@ -83,7 +26,6 @@ function App() {
         <Contact />
         <Footer />
       </BrowserRouter>
-      <HeroPattern />
     </div>
   );
 }

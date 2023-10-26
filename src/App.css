@@ -13,9 +13,12 @@
   --secondary-1: #c2185b;
   --bg-mode: #302056;
   --mode: #6649a7;
-  --header: rgba(23, 16, 40, 0.8);
+  --header: rgba(23, 16, 40, 0.6);
+  --opacity-1: rgba(48, 32, 86, 0.3);
+  --opacity-2: rgba(102, 73, 167, 0.2);
   --box-shadow-1: 0 0 15px rgba(168, 57, 255, 0.8);
-  --box-shadow-2: 0 0 10px rgba(173, 109, 223, 0.8);
+  --box-shadow-2: 0 3px 20px rgba(173, 109, 223, 0.6);
+  --box-shadow-3: 0 0 10px rgba(168, 57, 255, 0.4);
   --gradient-1: linear-gradient(to right, #7508cd, #ec407a);
   --gradient-2: linear-gradient(to right, #800ddd, #ad6ddf);
   --bg-gradient: -webkit-linear-gradient(270deg, #171028 10%, #6649a7);
@@ -34,9 +37,12 @@
   --secondary-1: #800ddd;
   --bg-mode: #e7cbfd;
   --mode: #ad6ddf;
-  --header: rgba(173, 109, 223, 0.8);
+  --header: rgba(173, 109, 223, 0.6);
+  --opacity-1: rgba(231, 203, 253, 0.2);
+  --opacity-2: rgba(173, 109, 223, 0.1);
   --box-shadow-1: 0 0 15px rgba(168, 57, 255, 0.8);
-  --box-shadow-2: 0 0 10px rgba(173, 109, 223, 0.8);
+  --box-shadow-2: 0 3px 20px rgba(168, 57, 255, 0.6);
+  --box-shadow-3: 0 0 10px rgba(168, 57, 255, 0.4);
   --gradient-1: linear-gradient(to right, #7508cd, #ec407a);
   --gradient-2: linear-gradient(to right, #c2185b, #eb6492);
   --bg-gradient: -webkit-linear-gradient(270deg, #ad6ddf 10%, #fbf6ff);
@@ -103,6 +109,19 @@ a {
   padding: 3rem 0 3rem 4rem;
 }
 
+@media (max-width: 55rem) {
+  .paddingTitle {
+    padding: 3rem 0 2rem 2rem;
+  }
+}
+
+.gradient {
+  background-image: var(--gradient-2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 .title {
   font-family: var(--type-first);
   color: var(--text-1);
@@ -134,14 +153,52 @@ a {
 
 .animeLeft {
   opacity: 0;
-  transform: translateX(-40px);
-  animation: animeLeft 0.6s forwards;
+  transform: translateX(-80px);
+  animation: animeLeft 0.8s ease-in-out forwards;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
 
 @keyframes animeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
   to {
     opacity: 1;
-    transform: initial;
+    transform: translateX(0);
+  }
+}
+
+.animeRight {
+  opacity: 0;
+  transform: translateX(80px);
+  animation: animeRight 2s ease-in-out forwards;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+@keyframes animeRight {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animeScale {
+  animation: scaleAnimation 3s ease-in-out forwards;
+}
+
+@keyframes scaleAnimation {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 

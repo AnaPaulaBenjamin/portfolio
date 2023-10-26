@@ -1,44 +1,62 @@
 import React from 'react';
 import styles from './About.module.css';
+import { useInView } from 'react-intersection-observer';
 import Foto from '../../assets/foto.jpg';
 import IconGitHub from '../../assets/Contact/Github';
 import IconLinkedin from '../../assets/Contact/Linkedin';
 import IconInstagran from '../../assets/Contact/Instagran';
-import StyledGradient from '../StyledComponents/Gradient';
-import StyledImageBorder from '../StyledComponents/ImageBorder';
+import ImageBorder from './ImageBorder';
 
 const About = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+
   return (
     <section id="sobre" className="background">
-      <div className={`${styles.about} container`}>
-        <h2 className="title paddingTitle">
-          sobre<StyledGradient>.</StyledGradient>
+      <div
+        ref={ref}
+        className={`${styles.about} container ${inView ? 'visible' : ''}`}
+      >
+        <h2 className={`title paddingTitle ${inView ? 'animeLeft' : ''}`}>
+          sobre<span className="gradient">.</span>
         </h2>
-        <div className={styles.image}>
-          <StyledImageBorder />
+        <div className={`${styles.image} ${inView ? 'animeLeft' : ''}`}>
+          <ImageBorder />
           <img src={Foto} alt="Foto - Ana Paula Benjamin" />
         </div>
-        <div className={styles.aboutMe}>
+        <div className={`${styles.aboutMe} ${inView ? 'animeRight' : ''}`}>
           <h3 className="subTitle">um pouco sobre mim</h3>
           <p>
-            Sou uma entusiasta que descobriu a paixão pelo mundo da tecnologia e
-            do design, buscando oportunidades em desenvolvimento front-end e
-            design de experiência do usuário (UX/UI).
+            Meu percurso é o resultado de uma paixão recentemente descoberta: o
+            mundo da tecnologia e do design. Como entusiasta, estou em uma
+            jornada empolgante em busca de oportunidades no desenvolvimento
+            front-end e design de interface do usuário (UI).
           </p>
           <p>
-            Minha jornada profissional anterior como empreendedora me ensinou a
-            importância da criatividade, empatia e trabalho em equipe. Estou
-            comprometida em aplicar essas habilidades para criar experiências
-            digitais impactantes e intuitivas.
+            Minha trajetória anterior como empreendedora deixou-me com lições
+            valiosas sobre a importância da criatividade, empatia e trabalho em
+            equipe. Agora, meu foco está em aplicar essas habilidades para criar
+            experiências digitais impactantes e intuitivas que ressoem com os
+            usuários.
           </p>
           <p>
-            Estou em constante busca por oportunidades de aprimoramento
-            contínuo, pois acredito que a evolução é a essência da excelência.
-            Cada projeto é uma oportunidade de aprendizado. Estou ansiosa para
-            aplicar essas habilidades e conhecimentos no universo fascinante da
-            criação digital.
+            Entendo que a busca pela excelência é um compromisso contínuo, e
+            acredito que a evolução constante é a chave para alcançá-la. Cada
+            projeto que empreendo é uma oportunidade de aprendizado, e estou
+            ansiosa para aplicar minhas habilidades e conhecimentos no vasto e
+            fascinante universo da criação digital.
           </p>
-          <div className={styles.icons}>
+          <p>
+            Meu portfólio é uma vitrine do que já alcancei, mas também reflete
+            minha constante busca por aprimoramento. Estou animada para explorar
+            novas conexões e oportunidades, e para compartilhar a jornada à
+            medida que ela se desdobra.
+          </p>
+          <span>
+            Atualmente cursando EAD em Análise e Desenvolvimento de Sistemas.
+          </span>
+          <div className={`${styles.icons} ${inView ? 'animeScale' : ''}`}>
             <a
               href="https://github.com/AnaPaulaBenjamin"
               target="_blank"

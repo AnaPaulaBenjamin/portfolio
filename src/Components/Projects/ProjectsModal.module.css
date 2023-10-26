@@ -1,18 +1,29 @@
 .modal {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -48%);
+  top: 15%;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 80%;
-  max-width: 60rem;
-  height: auto;
-  align-items: center;
-  justify-content: center;
+  max-width: 55rem;
+  height: 80%;
   margin: 0 auto;
   overflow: hidden;
   z-index: 1000;
   border-radius: 4px;
   box-shadow: var(--box-shadow-2);
+  animation: openAnimation 1s ease-in-out forwards;
+}
+
+@keyframes openAnimation {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .container {
@@ -37,7 +48,7 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: var(--background-2);
-  padding: 0 2rem 0 1rem;
+  padding: 0.5rem 2rem 0.5rem 1rem;
   height: 80vh;
   overflow: hidden;
 }
@@ -45,29 +56,31 @@
 .container h2 {
   font-family: var(--type-first);
   color: var(--text-1);
-  padding-top: 2rem;
-  padding-bottom: 1rem;
 }
 
-.project p {
+.description p {
   font-family: var(--type-first);
   color: var(--gray-3);
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 400;
   letter-spacing: 0.02rem;
-  padding-bottom: 1rem;
+}
+
+.description > p:not(:last-child) {
+  padding-bottom: .5rem;
 }
 
 .technologies {
   display: flex;
+  padding-top: 0.5rem;
   justify-content: space-between;
-  padding-bottom: 1rem;
   align-items: center;
 }
 
 .technologies a {
   color: var(--gray-2);
   font-weight: 600;
+  font-size: 1rem;
 }
 
 .technologies a:hover {
@@ -77,12 +90,31 @@
 .icons {
   display: flex;
   gap: 1rem;
-  padding-left: 0.5rem;
   align-items: center;
 }
 
-.project span {
-  padding: 0.1rem;
-  font-size: 2rem;
-  text-align: end;
+@media (max-width: 45rem) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .container img {
+    display: none;
+  }
+  .project {
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .description p {
+    font-size: 0.75rem;
+  }
+  .technologies {
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+  .technologies a {
+    font-size: 0.875rem;
+  }
 }
