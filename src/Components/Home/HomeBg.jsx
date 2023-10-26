@@ -5,6 +5,10 @@ const Svg = styled.svg`
   position: absolute;
   bottom: -1px;
   z-index: 10;
+
+  @media (max-width: 30rem) {
+    display: none;
+  }
 `;
 
 const BgHome = () => {
