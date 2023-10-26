@@ -14,8 +14,8 @@ const ListItem = styled.div`
 
 const Icon = styled.div`
   display: flex;
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
   margin-bottom: 1rem;
   align-items: center;
   justify-content: center;
@@ -30,10 +30,10 @@ const Icon = styled.div`
 const Paragraph = styled.p`
   font-family: var(--type-first);
   color: var(--text-2);
-  font-size: 1rem;
+  font-size: 1.25rem;
 
   @media (max-width: 30rem) {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
 `;
 

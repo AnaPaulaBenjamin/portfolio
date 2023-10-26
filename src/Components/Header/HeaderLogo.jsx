@@ -15,7 +15,7 @@ const HeaderLogo = () => {
       aria-label="Logo - Home"
     >
       <IconLogo1 />
-      <div className={styles.listLogo}>
+      <div>
         <span className={styles.list}>a</span>
         <span className={styles.list}>.</span>
         <span className={styles.list}>p</span>

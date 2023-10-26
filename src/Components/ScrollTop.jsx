@@ -11,15 +11,15 @@ const ScrollButton = styled.div`
 
   @media (max-width: 55rem) {
     right: 1rem;
-
-    svg {
-      width: 25px;
-      height: 25px;
-    }
   }
 
   @media (max-width: 30rem) {
     right: 0.5rem;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
   }
 
   &:hover {
@@ -38,8 +38,8 @@ const ScrollTop = ({ width, height }) => {
   return (
     <ScrollButton onClick={scrollToTop}>
       <svg
-        width={width || '30'}
-        height={height || '30'}
+        width={width || '35'}
+        height={height || '35'}
         viewBox="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

@@ -3,7 +3,6 @@
   flex-direction: column;
   min-height: 100vh;
   justify-content: center;
-  padding-top: 3.75rem;
 }
 
 .iconHello {
@@ -13,17 +12,16 @@
   align-items: center;
 }
 
-.iconHello p{
+.iconHello p {
   font-family: var(--type-first);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   background-image: var(--gradient-1);
 }
 
 .iconHello span {
-  align-items: center;
-  font-size: 1.25rem;
-  margin-bottom: 0.375rem;
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
   animation: moveIcon 2s infinite;
   transform-origin: 70% 70%;
 }
@@ -58,13 +56,13 @@
 .home h1 {
   font-family: var(--type-second);
   color: var(--text-1);
-  font-size: 4rem;
+  font-size: 5rem;
   letter-spacing: 0.2rem;
   font-weight: 600;
 }
 
 .home h2 {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   font-weight: 400;
   padding-top: 1rem;
   text-transform: none;
@@ -72,17 +70,16 @@
 
 @media (max-width: 30rem) {
   .home {
-    padding-top: 2rem;
     align-items: center;
   }
   .iconHello p {
-    font-size: 1rem;
-    padding-right: 2.5rem;
+    font-size: 1.25rem;
+    margin-right: 2.5rem;
   }
   .home h1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   .home h2 {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 }

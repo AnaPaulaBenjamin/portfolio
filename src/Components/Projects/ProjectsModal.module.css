@@ -5,7 +5,7 @@
   right: 0;
   bottom: 0;
   width: 80%;
-  max-width: 55rem;
+  max-width: 70rem;
   height: 80%;
   margin: 0 auto;
   overflow: hidden;
@@ -43,12 +43,17 @@
   justify-content: space-between;
 }
 
+.title span {
+  font-size: 2rem;
+  padding-left: 0.2rem;
+}
+
 .project {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: var(--background-2);
-  padding: 0.5rem 2rem 0.5rem 1rem;
+  padding: 1.5rem;
   height: 80vh;
   overflow: hidden;
 }
@@ -61,13 +66,13 @@
 .description p {
   font-family: var(--type-first);
   color: var(--gray-3);
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 400;
-  letter-spacing: 0.02rem;
+  letter-spacing: 0.04rem;
 }
 
 .description > p:not(:last-child) {
-  padding-bottom: .5rem;
+  padding-bottom: 1rem;
 }
 
 .technologies {
@@ -78,13 +83,12 @@
 }
 
 .technologies a {
-  color: var(--gray-2);
+  color: var(--primary-1);
   font-weight: 600;
-  font-size: 1rem;
 }
 
 .technologies a:hover {
-  color: var(--primary-1);
+  color: var(--gray-1);
 }
 
 .icons {
@@ -93,28 +97,25 @@
   align-items: center;
 }
 
-@media (max-width: 45rem) {
+@media (max-width: 50rem) {
   .container {
     grid-template-columns: 1fr;
   }
   .container img {
     display: none;
   }
-  .project {
-    padding: 0.5rem 1rem 0.5rem 0.5rem;
-  }
 }
 
 @media (max-width: 30rem) {
   .description p {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
   .technologies {
     flex-direction: column;
     justify-content: flex-end;
-    gap: 0.5rem;
+    gap: 1rem;
   }
   .technologies a {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }

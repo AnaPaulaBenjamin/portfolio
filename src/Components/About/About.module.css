@@ -7,8 +7,8 @@
 }
 
 .image {
-  height: 300px;
-  width: 280px;
+  height: 340px;
+  width: 300px;
   position: relative;
   padding: 2rem 0 0 2rem;
   overflow: hidden;
@@ -30,22 +30,22 @@
 
 .aboutMe h3 {
   text-align: center;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
 }
 
 .aboutMe p {
   font-family: var(--type-first);
   color: var(--text-2);
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.2rem;
-  padding-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 200;
+  letter-spacing: 0.05rem;
+  padding-bottom: 1rem;
 }
 
 .aboutMe span {
   color: var(--gray-2);
   font-family: var(--type-first);
-  font-size: 0.875rem;
+  font-size: 1.25rem;
 }
 
 .aboutMe span::before {
@@ -56,7 +56,7 @@
   background-color: var(--primary-1);
   border-radius: 50%;
   margin-right: 0.4rem;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.2rem;
 }
 
 .icons {
@@ -64,12 +64,15 @@
   align-items: center;
   padding-top: 1rem;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .icons a {
   background: var(--background-2);
-  padding: 0.6rem;
+  height: 3rem;
+  width: 3rem;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   display: inline-flex;
   transition: 0.4s;
@@ -88,11 +91,11 @@
   }
   .icons {
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
   }
   .image {
-    height: 180px;
-    width: 180px;
+    height: 200px;
+    width: 200px;
     margin: 0 auto;
     justify-content: center;
     padding: 0.5rem;
@@ -107,9 +110,6 @@
     padding-left: 0;
     padding-top: 0;
   }
-  .aboutMe p {
-    padding-bottom: 1rem;
-  }
 }
 
 @media (max-width: 30rem) {
@@ -118,7 +118,7 @@
     padding-bottom: 1rem;
   }
   .image {
-    height: 140px;
-    width: 140px;
+    height: 180px;
+    width: 180px;
   }
 }

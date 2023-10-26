@@ -91,7 +91,7 @@ a {
 }
 
 .container {
-  max-width: 60rem;
+  max-width: 70rem;
   padding: 0 2rem;
   margin: 0 auto;
 }
@@ -109,7 +109,7 @@ a {
   padding: 3rem 0 3rem 4rem;
 }
 
-@media (max-width: 55rem) {
+@media (max-width: 50rem) {
   .paddingTitle {
     padding: 3rem 0 2rem 2rem;
   }
@@ -127,10 +127,16 @@ a {
   color: var(--text-1);
   letter-spacing: 0.1rem;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 @media (max-width: 50rem) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 30rem) {
   .title {
     font-size: 1.5rem;
   }
@@ -140,14 +146,14 @@ a {
   font-family: var(--type-first);
   color: var(--gray-3);
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.25rem;
   letter-spacing: 0.02rem;
   font-weight: 400;
 }
 
 @media (max-width: 30rem) {
   .subTitle {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 

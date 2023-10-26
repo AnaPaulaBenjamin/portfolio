@@ -31,7 +31,7 @@ function ProjectsModal({ isOpen, closeModal, selectedProject, isDarkMode }) {
           <h2 className={Styles.title}>
             <div>
               {selectedProject.title}
-              <span className="gradient"> .</span>
+              <span className="gradient">.</span>
             </div>
             <IconModal
               className={Styles.iconModal}

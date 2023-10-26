@@ -62,21 +62,21 @@ const About = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <IconGitHub width="18px" height="18px" />
+              <IconGitHub />
             </a>
             <a
               href="https://www.linkedin.com/in/ana-paula-benjamin/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <IconLinkedin width="17px" height="18px" />
+              <IconLinkedin />
             </a>
             <a
               href="https://www.instagram.com/ana.benjamin0/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <IconInstagran width="18px" height="18px" />
+              <IconInstagran />
             </a>
           </div>
         </div>

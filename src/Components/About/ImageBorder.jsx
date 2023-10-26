@@ -19,8 +19,8 @@ const Border = styled.svg`
   position: absolute;
   top: 0;
   left: 0;
-  width: 220px;
-  height: 220px;
+  width: 240px;
+  height: 240px;
   animation: ${blink} 3s ease-in-out infinite;
 
   @media (max-width: 55rem) {
@@ -40,8 +40,8 @@ const Gradient = styled.linearGradient`
 const ImageBorder = () => {
   return (
     <Border
-      width="220"
-      height="220"
+      width="258"
+      height="258"
       viewBox="0 0 258 258"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +55,7 @@ const ImageBorder = () => {
       <path
         d="M254 4C166.459 4 35.6792 4.32583 8.89557 4.39501C6.13939 4.40213 4 6.54725 4 9.30343C4 36.0896 4 166.876 4 254"
         stroke="url(#gradient)"
-        strokeWidth="8"
+        strokeWidth="10"
         strokeLinecap="round"
       />
     </Border>

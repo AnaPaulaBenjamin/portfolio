@@ -15,9 +15,9 @@ const Container = styled.div`
 `;
 
 const Projects = styled.div`
-  margin: 0 0.5rem;
-  gap: 1rem;
+  margin: 1rem;
   display: flex;
+  gap: 1.5rem;
   flex-direction: column;
 
   justify-content: space-between;
@@ -25,21 +25,22 @@ const Projects = styled.div`
 
 const Image = styled.img`
   border-radius: 4px 4px 0 0;
-  height: 160px;
+  height: 200px;
   width: 100%;
   object-fit: cover;
 `;
 
 const Title = styled.div`
   display: flex;
+  font-size: 1.25rem;
   justify-content: space-between;
   font-family: var(--type-first);
   color: var(--text-2);
-  padding-top: 0.75rem;
+  padding-top: 0.5rem;
 `;
 
 const Description = styled.p`
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: var(--gray-3);
   font-family: var(--type-first);
 `;
@@ -49,7 +50,6 @@ const Icons = styled.div`
   align-items: center;
   gap: 0.75rem;
   height: 100%;
-  padding-bottom: 0.75rem;
 
   div {
     display: flex;

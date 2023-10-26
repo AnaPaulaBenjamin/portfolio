@@ -4,9 +4,10 @@ import styled from 'styled-components';
 
 const List = styled.ul`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   font-family: var(--type-first);
   gap: 1rem;
+  padding-top: 1rem;
 
   @media (max-width: 30rem) {
     grid-template-columns: 1fr 1fr;
@@ -25,7 +26,7 @@ const ListItem = styled(animated.li)`
   gap: 1rem;
   font-weight: 600;
   letter-spacing: 0.05rem;
-  padding: 1rem;
+  padding: 2rem;
   text-transform: uppercase;
   font-size: 0.75rem;
   border-radius: 4px;

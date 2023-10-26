@@ -8,7 +8,7 @@
 .contactList {
   display: grid;
   grid-template-columns: repeat(4, auto);
-  padding: 4rem 0;
+  padding: 5rem 0;
   transition: box-shadow 0.5s ease-in-out;
 }
 
@@ -17,29 +17,28 @@
   color: var(--text-2);
   background: var(--background-2);
   border-radius: 10px;
-  font-weight: 600;
+  font-weight: 400;
   text-align: center;
-  padding: 3rem;
-  font-size: 1.25rem;
-  letter-spacing: 0.1rem;
+  padding: 3rem 4rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.08rem;
 }
 
 @media (max-width: 50rem) {
   .contactList {
-    padding: 3rem 0;
     gap: 0.5rem;
   }
   .contactMe {
-    padding: 1rem 1rem;
+    padding: 2rem 1rem;
     font-size: 1rem;
   }
 }
 
 @media (max-width: 30rem) {
-  .contactMe {
-    font-size: 0.875rem;
+  .contactList {
+    padding: 3rem 0;
   }
-   .contact{
+  .contact {
     padding-top: 0;
     padding-bottom: 1rem;
   }
