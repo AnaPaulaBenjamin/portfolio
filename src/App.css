@@ -109,7 +109,7 @@ a {
   padding: 3rem 0 3rem 4rem;
 }
 
-@media (max-width: 55rem) {
+@media (max-width: 60rem) {
   .paddingTitle {
     padding: 3rem 0 2rem 2rem;
   }
