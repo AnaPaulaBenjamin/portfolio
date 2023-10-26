@@ -25,7 +25,7 @@ const projectsData = [
     alt: 'Dogs - Rede Social para Pets',
     title: 'Rede Social Dogs',
     description:
-      'Criação da aplicação Dogs, rede social para cachorros. A tela inicial apresenta o feed de postagens e é possível navegar através de fotos e autor. Logado como usuário, é possível comentar as postagens.',
+      'Aplicação Dogs, rede social para cachorros. A tela inicial apresenta o feed de postagens e é possível navegar através de fotos e autor. Logado como usuário, é possível comentar as postagens.',
     icons: [<IconHtml />, <IconCss />, <IconJavaScrip />, <IconReact />],
     externalLink: 'https://dogs-origamid.vercel.app/',
     paragraphs1: [

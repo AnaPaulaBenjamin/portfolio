@@ -3,7 +3,7 @@ import { Link } from './SharedComponents';
 import { useLocation } from 'react-router-dom';
 import styles from './MobileMenu.module.css';
 import stylesHeader from './Header.module.css';
-import Moon from './Assets/moon';
+import Moon from './Assets/Moon';
 import Sun from './Assets/Sun';
 
 const MobileMenu = ({ isDarkMode, toggleDarkMode }) => {
