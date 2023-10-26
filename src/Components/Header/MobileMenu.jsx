@@ -3,8 +3,8 @@ import { Link } from './SharedComponents';
 import { useLocation } from 'react-router-dom';
 import styles from './MobileMenu.module.css';
 import stylesHeader from './Header.module.css';
-import Moon from '../../assets/Mode/moon';
-import Sun from '../../assets/Mode/Sun';
+import Moon from './Assets/moon';
+import Sun from './Assets/Sun';
 
 const MobileMenu = ({ isDarkMode, toggleDarkMode }) => {
   const [menuOpen, setMenuOpen] = useState(false);

@@ -3,11 +3,11 @@ import { useTrail, animated } from 'react-spring';
 import { useInView } from 'react-intersection-observer';
 import Styles from '../Contact/Contact.module.css';
 import ContactItem from './ContactItem';
-import IconEmail from '../../assets/Contact/Email';
-import IconGithub from '../../assets/Contact/Github';
-import IconLinkedin from '../../assets/Contact/Linkedin';
-import IconWhatsapp from '../../assets/Contact/Whatsapp';
-import BodySvg from '../../assets/SVGBody/Svg3';
+import IconEmail from './Assets/Email';
+import IconGithub from './Assets/Github';
+import IconLinkedin from './Assets/Linkedin';
+import IconWhatsapp from './Assets/Whatsapp';
+import BodySvg from '../SVGBody/Svg3';
 
 const Contact = () => {
   const contactData = [

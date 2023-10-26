@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './About.module.css';
 import { useInView } from 'react-intersection-observer';
-import Foto from '../../assets/foto.jpg';
-import IconGitHub from '../../assets/Contact/Github';
-import IconLinkedin from '../../assets/Contact/Linkedin';
-import IconInstagran from '../../assets/Contact/Instagran';
+import Foto from './foto.jpg';
+import IconGitHub from '../Contact/Assets/Github';
+import IconLinkedin from '../Contact/Assets/Linkedin';
+import IconInstagran from '../Contact/Assets/Instagran';
 import ImageBorder from './ImageBorder';
 
 const About = () => {

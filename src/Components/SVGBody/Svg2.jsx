@@ -1,5 +1,5 @@
 import React from 'react';
-import ComponentBody from '../../Components/SVGBodyComponent';
+import ComponentBody from './SVGBodyComponent';
 
 const Detail2 = () => {
   return (

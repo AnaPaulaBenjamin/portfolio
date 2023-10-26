@@ -2,17 +2,17 @@ import React from 'react';
 import styles from './Skills.module.css';
 import { useInView } from 'react-intersection-observer';
 import SkillsList from './SkillsList';
-import IconHtml from '../../assets/Skills/Html';
-import IconCss from '../../assets/Skills/Css';
-import IconReact from '../../assets/Skills/React';
-import IconStyled from '../../assets/Skills/Styled';
-import IconJavaScript from '../../assets/Skills/JavaScript';
-import IconFigma from '../../assets/Skills/Figma';
-import IconGit from '../../assets/Skills/Git';
-import IconResponsive from '../../assets/Skills/Responsive';
-import IconLayout from '../../assets/Skills/Layout';
-import IconWireframing from '../../assets/Skills/Wireframing';
-import BodySvg from '../../assets/SVGBody/Svg1';
+import IconHtml from './Assets/Html';
+import IconCss from './Assets/Css';
+import IconReact from './Assets/React';
+import IconStyled from './Assets/Styled';
+import IconJavaScript from './Assets/JavaScript';
+import IconFigma from './Assets/Figma';
+import IconGit from './Assets/Git';
+import IconResponsive from './Assets/Responsive';
+import IconLayout from './Assets/Layout';
+import IconWireframing from './Assets/Wireframing';
+import BodySvg from '../SVGBody/Svg1';
 
 const Skills = () => {
   const Technologies = [

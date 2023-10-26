@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './HeaderLogo.module.css';
 import { Link } from 'react-scroll';
-import IconLogo1 from '../../assets/Logo/Logo1';
-import IconLogo2 from '../../assets/Logo/Logo2';
+import IconLogo1 from './Assets/Logo1';
+import IconLogo2 from './Assets/Logo2';
 
 const HeaderLogo = () => {
   return (

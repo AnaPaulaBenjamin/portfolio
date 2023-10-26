@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from './SharedComponents';
 import styles from './Header.module.css';
 import HeaderLogo from './HeaderLogo';
-import Moon from '../../assets/Mode/moon.jsx';
-import Sun from '../../assets/Mode/Sun.jsx';
+import Moon from './Assets/moon.jsx';
+import Sun from './Assets/Sun.jsx';
 import MobileMenu from './MobileMenu';
 import { useTrail, animated } from 'react-spring';
 

@@ -2,20 +2,26 @@ import React, { useState } from 'react';
 import Styles from '../Projects/Projects.module.css';
 import { useInView } from 'react-intersection-observer';
 import MyProjects from './MyProjects';
-import IconHtml from '../../assets/Projects/Html';
-import IconCss from '../../assets/Projects/Css';
-import IconReact from '../../assets/Projects/React';
-import IconJavaScrip from '../../assets/Projects/JavaScript';
-import IconFigma from '../../assets/Projects/Figma';
+import ImageDogs from './Assets/dogs.png';
+import ImageDogsModal from './Assets/dogs-modal.png';
+import ImageBikcraft from './Assets/bikcraft.webp';
+import ImageBikcraftModal from './Assets/bikcraft-modal.png';
+import ImageShortsSummary from './Assets/shorts-summary.jpeg';
+import ImageShortsSummaryModal from './Assets/shorts-summary-modal.png';
+import IconHtml from './Assets/Html';
+import IconCss from './Assets/Css';
+import IconReact from './Assets/React';
+import IconJavaScrip from './Assets/JavaScript';
+import IconFigma from './Assets/Figma';
 import ProjectsModal from '../Projects/ProjectsModal';
 import { useTrail, animated } from 'react-spring';
-import BodySvg from '../../assets/SVGBody/Svg2';
+import BodySvg from '../SVGBody/Svg2';
 
 const projectsData = [
   {
     id: 1,
-    src: '../../src/assets/dogs.png',
-    modalImage: '../../src/assets/dogs-modal.png',
+    src: ImageDogs,
+    modalImage: ImageDogsModal,
     alt: 'Dogs - Rede Social para Pets',
     title: 'Rede Social Dogs',
     description:
@@ -31,8 +37,8 @@ const projectsData = [
   },
   {
     id: 2,
-    src: '../../src/assets/bikcraft.webp',
-    modalImage: '../../src/assets/bikcraft-modal.png',
+    src: ImageBikcraft,
+    modalImage: ImageBikcraftModal,
     alt: 'Bikcraft - Bicicletas Elétricas',
     title: 'Bikcraft',
     description:
@@ -48,8 +54,8 @@ const projectsData = [
   },
   {
     id: 3,
-    src: '../../src/assets/shorts-summary.jpeg',
-    modalImage: '../../src/assets/shorts-summary-modal.png',
+    src: ImageShortsSummary,
+    modalImage: ImageShortsSummaryModal,
     alt: 'Shorts Summary- Resumo de Shorts',
     title: 'Shorts Summary',
     description:
