@@ -1,5 +1,6 @@
 .header {
-  position: fixed;
+  position: absolute;
+  top: 0;
   width: 100%;
   z-index: 50;
   background: var(--header);
@@ -8,14 +9,18 @@
 .container {
   display: flex;
   justify-content: space-between;
+  max-width: 70rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+  position: relative;
   align-items: center;
   height: 5rem;
-  flex-wrap: wrap;
 }
 
 .nav {
   display: flex;
   gap: 1rem;
+  cursor: pointer;
   font-weight: 400;
   font-family: var(--type-first);
   align-items: center;
@@ -61,20 +66,14 @@
   }
 }
 
-@media (max-width: 45rem) {
-  .nav {
-    display: none;
-  }
-}
-
 .mode {
-  display: flex;
-  gap: 0.4rem;
+  display: inline-flex;
+  height: 2rem;
+  width: 4rem;
   align-items: center;
   justify-content: center;
   background: var(--bg-mode);
   border-radius: 25px;
-  padding: 0.375rem 0.5rem;
   transition: background-color 0.3s ease;
 }
 
@@ -95,11 +94,11 @@
 }
 
 .dark .themeToggle {
-  transform: translateX(30px);
+  transform: translateX(25px);
 }
 
 .dark .iconContainer {
-  transform: translateX(-30px);
+  transform: translateX(-25px);
 }
 
 .light .themeToggle {
@@ -108,4 +107,8 @@
 
 .light .iconContainer {
   transform: translateX(0);
+}
+
+.light .mode {
+  gap: 0.2rem;
 }

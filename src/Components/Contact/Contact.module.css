@@ -43,3 +43,10 @@
     padding-bottom: 1rem;
   }
 }
+
+@media (max-width: 25rem) {
+  .contactList {
+    grid-template-columns: repeat(2, auto);
+    gap: 2rem;
+  }
+}

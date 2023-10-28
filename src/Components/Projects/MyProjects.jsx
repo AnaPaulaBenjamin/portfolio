@@ -25,7 +25,7 @@ const Projects = styled.div`
 
 const Image = styled.img`
   border-radius: 4px 4px 0 0;
-  height: 200px;
+  max-height: 180px;
   width: 100%;
   object-fit: cover;
 `;

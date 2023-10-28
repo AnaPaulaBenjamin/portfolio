@@ -54,6 +54,9 @@
 
 body {
   margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  box-sizing: border-box;
   --type-first: 'Nunito', Arial, sans-serif;
   --type-second: 'Playfair Display', serif;
 }

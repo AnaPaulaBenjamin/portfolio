@@ -7,7 +7,7 @@
 
 .myProjects {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 1rem;
   padding-top: 2rem;
 }
@@ -25,5 +25,8 @@
   }
   .projects h2 {
     padding: 4rem 0 2rem 2rem;
+  }
+  .myProjects {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }

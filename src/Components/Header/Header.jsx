@@ -10,14 +10,14 @@ import { useTrail, animated } from 'react-spring';
 const Header = ({ isDarkMode, toggleDarkMode }) => {
   const [isMobile, setIsMobile] = useState(
     window.innerWidth <
-      45 * parseFloat(getComputedStyle(document.documentElement).fontSize),
+      50 * parseFloat(getComputedStyle(document.documentElement).fontSize),
   );
 
   useEffect(() => {
     const handleResize = () => {
       const newIsMobile =
         window.innerWidth <
-        45 * parseFloat(getComputedStyle(document.documentElement).fontSize);
+        50 * parseFloat(getComputedStyle(document.documentElement).fontSize);
       setIsMobile(newIsMobile);
     };
 
@@ -36,7 +36,7 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
   ];
 
   const trail = useTrail(navItems.length, {
-    from: { opacity: 0, transform: 'translateX(-20px)' },
+    from: { opacity: 0, transform: 'translateX(-25px)' },
     to: { opacity: 1, transform: 'translateX(0)' },
     config: { duration: 600 },
   });
@@ -45,15 +45,16 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
     <header
       className={`${styles.header} ${isDarkMode ? styles.dark : styles.light}`}
     >
-      <div className={`${styles.container} container`}>
+      <div className={styles.container}>
         <HeaderLogo />
-        {isMobile && (
-          <MobileMenu isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-        )}
-        <nav
-          className={isMobile ? `${styles.nav} ${styles.menuOpen}` : styles.nav}
-        >
-          {!isMobile && (
+        {isMobile ? (
+          <MobileMenu
+            isDarkMode={isDarkMode}
+            toggleDarkMode={toggleDarkMode}
+            navItems={navItems}
+          />
+        ) : (
+          <nav>
             <ul className={styles.nav}>
               {trail.map((style, index) => (
                 <animated.li key={index} style={style}>
@@ -74,8 +75,8 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
                 </div>
               </li>
             </ul>
-          )}
-        </nav>
+          </nav>
+        )}
       </div>
     </header>
   );

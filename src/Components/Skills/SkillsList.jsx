@@ -13,6 +13,10 @@ const List = styled.ul`
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
   }
+
+  @media (max-width: 22rem) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const ListItem = styled(animated.li)`
