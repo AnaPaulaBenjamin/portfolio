@@ -54,7 +54,7 @@
   top: 4rem;
   right: 2rem;
   padding: 0.5rem 3rem 0.5rem 2rem;
-  background: var(--bg-gradient);
+  background: var(--header);
   border-radius: 4px;
   pointer-events: none;
   animation: animeMode 1s ease-in-out forwards;

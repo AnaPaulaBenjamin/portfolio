@@ -99,11 +99,11 @@
 }
 
 @media (max-width: 50rem) {
-  .container {
-    grid-template-columns: 1fr;
-  }
   .container img {
     display: none;
+  }
+  .container {
+    grid-template-columns: 1fr;
   }
 }
 

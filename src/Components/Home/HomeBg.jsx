@@ -6,17 +6,14 @@ const Svg = styled.svg`
   bottom: -1px;
   z-index: 0;
 
-  // @media (max-width: 30rem) {
-  //   display: none;
-  // }
+  @media (max-width: 30rem) {
+    display: none;
+  }
 `;
 
 const BgHome = () => {
   return (
-    <Svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1430 320"
-    >
+    <Svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1430 320">
       <path
         fill="var(--background-1)"
         fillOpacity="1"

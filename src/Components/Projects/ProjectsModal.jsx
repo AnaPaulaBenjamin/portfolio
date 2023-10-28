@@ -24,9 +24,8 @@ function ProjectsModal({ isOpen, closeModal, selectedProject, isDarkMode }) {
       }}
     >
       <div className={Styles.container}>
-        <div>
-          <img src={selectedProject.modalImage} alt={selectedProject.alt} />
-        </div>
+        <img src={selectedProject.modalImage} alt={selectedProject.alt} />
+
         <div className={Styles.project}>
           <h2 className={Styles.title}>
             <div>
