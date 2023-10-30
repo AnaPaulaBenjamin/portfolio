@@ -1,6 +1,6 @@
 ![portfólio](https://github.com/AnaPaulaBenjamin/portfolio/assets/126605609/be70a979-c8ee-4e0e-99d1-3a3f779d7226)
 
-Meu portfólio não é apenas um conjunto de realizações passadas; é uma vitrine da minha constante busca por aprimoramento. Cada projeto que realizo é uma nova página em minha jornada, repleta de desafios superados e lições aprendidas. Estou animada para explorar novas conexões, colaborações e oportunidades no mundo da tecnologia e design. Estou comprometida em compartilhar cada passo dessa jornada à medida que ela se desdobra.
+Meu portfolio é uma vitrine do que já alcancei, mas também reflete minha constante busca por aprimoramento. Cada projeto representa não apenas um marco em minha jornada, mas também um compromisso contínuo com a evolução.
 
 # React + Vite
 
